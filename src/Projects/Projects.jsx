@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import Ecommerce from '../assets/Ecommerce.PNG';
-import Grocery from '../assets/Grocery.PNG';
+import grocery from '../assets/grocery.PNG';
 import messho from '../assets/meesho.PNG';
 import gym from '../assets/gym.PNG';
 import bollyfilix from '../assets/bollyfilix.PNG';
@@ -17,7 +17,7 @@ import marks from '../assets/marks.PNG';
 const projectData = [
   {
     title: 'Grocery Website',
-    image: Grocery,
+    image: grocery,
     description: 'This is a React Project Grocery website with cart, ordering, and content features.',
     live: 'https://grocery-app-sand-phi.vercel.app/', // Replace with actual live link
     code: 'https://github.com/23prakashjha/Grocery-App.git',
