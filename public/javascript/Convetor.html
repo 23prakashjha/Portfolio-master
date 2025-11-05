@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celsius to Fahrenheit</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: antiquewhite;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 800px;
+      width: 90%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      flex: 1 1 250px;
+      margin: 10px 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      height: 45px;
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .button-group {
+      display: flex;
+      align-items: flex-end;
+      margin: 10px 15px;
+    }
+
+    .button {
+      padding: 12px 20px;
+      background-color: lavender;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .button:hover {
+      background-color: aquamarine;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+      }
+
+      .form-group,
+      .button-group {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    function convertTemperature() {
+      const celsius = parseFloat(document.getElementById("cs").value);
+      if (isNaN(celsius)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+
+      const fahrenheit = (celsius * 9) / 5 + 32;
+      document.getElementById("fh").value = fahrenheit.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Celsius to Fahrenheit Calculator</h1>
+
+  <div class="container">
+    <div class="form-group">
+      <label for="cs">Celsius</label>
+      <input type="number" id="cs" placeholder="Enter Celsius" />
+    </div>
+
+    <div class="button-group">
+      <input type="button" class="button" value="Convert" onclick="convertTemperature()" />
+    </div>
+
+    <div class="form-group">
+      <label for="fh">Fahrenheit</label>
+      <input type="number" id="fh" placeholder="Fahrenheit Result" readonly />
+    </div>
+  </div>
+
+</body>
+</html>

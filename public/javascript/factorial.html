@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factorial Calculator</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #fff8dc; /* wheat-like background */
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    
+    .subdiv {
+      background-color: wheat;
+      border: 1px solid gray;
+      padding: 20px;
+      max-width: 700px;
+      width: 95%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: red;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    th {
+      text-align: left;
+      font-size: 1.1rem;
+      width: 35%;
+      vertical-align: middle;
+    }
+
+    td {
+      width: 65%;
+      vertical-align: middle;
+    }
+
+    select, input[type="number"] {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border: 2px solid #000;
+      border-radius: 8px;
+      outline-offset: 2px;
+      outline-color: #999;
+      transition: outline-color 0.3s;
+    }
+
+    select:focus, input[type="number"]:focus {
+      outline-color: #6ca0dc;
+    }
+
+    /* Hide/show input2 by controlling display instead of visibility */
+    #td2 {
+      display: none;
+    }
+
+    /* Buttons container */
+    .buttons {
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    input[type="button"] {
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 10px 25px;
+      border-radius: 10px;
+      border: 1px solid lightblue;
+      background-color: lightblue;
+      color: black;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    input[type="button"]:hover {
+      background-color: #78d3f8;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+    textarea#res {
+      width: 100%;
+      height: 120px;
+      resize: vertical;
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      border: 2px solid black;
+      background-color: #ffffe0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      th, td {
+        display: block;
+        width: 100%;
+      }
+      table {
+        border-spacing: 0 15px;
+      }
+      th {
+        margin-bottom: 6px;
+      }
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      input[type="button"] {
+        width: 100%;
+      }
+      textarea#res {
+        font-size: 1rem;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="subdiv">
+    <h1>Factorial Calculator</h1>
+    <p>
+      This factorial calculator helps you calculate any factorial operation which is a function that makes the
+      product of all positive integers less than or equal to a given number. More details on this topic you
+      can read below the form.
+    </p>
+
+    <form onsubmit="return false;">
+      <table>
+        <tr>
+          <th>Choose Operation:</th>
+          <td>
+            <select id="cop" onchange="displaydata()">
+              <option value="simple">Simple factorial</option>
+              <option value="add2">Add 2 factorials</option>
+              <option value="sub2">Subtract 2 factorials</option>
+              <option value="product2">Product of 2 factorials</option>
+              <option value="divide2">Divide 2 factorials</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th id="td1">n!</th>
+          <td>
+            <input
+              type="number"
+              id="nam1"
+              class="blue"
+              placeholder="Enter first number"
+              min="0"
+            />
+          </td>
+        </tr>
+        <tr id="td2">
+          <th>m!</th>
+          <td>
+            <input
+              type="number"
+              id="nam2"
+              class="red"
+              placeholder="Enter second number"
+              min="0"
+            />
+          </td>
+        </tr>
+      </table>
+
+      <div class="buttons">
+        <input type="button" value="Calculate" class="button" onclick="factorials()" />
+        <input type="button" value="Reset" class="button1" onclick="resetForm()" />
+      </div>
+    </form>
+
+    <h3>Result:</h3>
+    <textarea id="res" placeholder="Result" readonly></textarea>
+  </div>
+
+  <script>
+    function factorial(num) {
+      if (num < 0) {
+        return NaN; // Factorial not defined for negative numbers
+      }
+      if (num === 0 || num === 1) return 1;
+      let fact = 1;
+      for (let i = 2; i <= num; i++) {
+        fact *= i;
+      }
+      return fact;
+    }
+
+    function factorials() {
+      const data = document.getElementById("cop").value;
+      const num1 = parseInt(document.getElementById("nam1").value);
+      const num2Input = document.getElementById("nam2").value;
+      const num2 = num2Input !== "" ? parseInt(num2Input) : null;
+
+      if (isNaN(num1) || num1 < 0) {
+        alert("Please enter a valid non-negative integer for the first number.");
+        return;
+      }
+
+      // For operations with two inputs, check second input validity
+      if (
+        (data !== "simple") &&
+        (num2 === null || isNaN(num2) || num2 < 0)
+      ) {
+        alert("Please enter a valid non-negative integer for the second number.");
+        return;
+      }
+
+      const fact1 = factorial(num1);
+      let fact2;
+      if (num2 !== null) fact2 = factorial(num2);
+
+      let total;
+      let output = "";
+
+      switch (data) {
+        case "add2":
+          total = fact1 + fact2;
+          output = `${num1}! + ${num2}! = ${total}`;
+          break;
+        case "sub2":
+          total = fact1 - fact2;
+          output = `${num1}! - ${num2}! = ${total}`;
+          break;
+        case "product2":
+          total = fact1 * fact2;
+          output = `${num1}! * ${num2}! = ${total}`;
+          break;
+        case "divide2":
+          if (fact2 === 0) {
+            output = "Error: Division by zero!";
+          } else {
+            total = fact1 / fact2;
+            output = `${num1}! / ${num2}! = ${total}`;
+          }
+          break;
+        default: // simple factorial
+          output = `${num1}! = ${fact1}`;
+      }
+
+      document.getElementById("res").value = output;
+    }
+
+    function displaydata() {
+      const data = document.getElementById("cop").value;
+      const td2 = document.getElementById("td2");
+      const td1 = document.getElementById("td1");
+
+      if (data === "simple") {
+        td1.textContent = "n!";
+        td2.style.display = "none";
+      } else {
+        switch (data) {
+          case "add2":
+            td1.textContent = "n! + m!";
+            break;
+          case "sub2":
+            td1.textContent = "n! - m!";
+            break;
+          case "product2":
+            td1.textContent = "n! * m!";
+            break;
+          case "divide2":
+            td1.textContent = "n! / m!";
+            break;
+        }
+        td2.style.display = "table-row";
+      }
+    }
+
+    function resetForm() {
+      document.getElementById("cop").value = "simple";
+      document.getElementById("nam1").value = "";
+      document.getElementById("nam2").value = "";
+      document.getElementById("res").value = "";
+      displaydata();
+    }
+
+    // Initialize form on page load
+    window.onload = displaydata;
+  </script>
+</body>
+</html>

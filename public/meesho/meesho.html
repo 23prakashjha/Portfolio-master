@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Meesho Clone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light p-1 border border-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-5" href="#">
+            <img src="./images/meeshoLogo.svg" alt="Avatar Logo" style="width:160px;" class="one">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="d-flex col-md-6">
+         <input type="search" class="form-control ms-3" id="inputEmail4" placeholder="search">  
+          </form>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item me-4">
+                <a class="nav-link" aria-current="page" href="#" style="border-right:1px solid gainsboro;font-family: Mier book;font-weight: bolder">Become a<br> Supplier</a>
+              </li>
+              <li class="nav-item  me-4">
+                <a class="nav-link" href="#" style="border-right:1px solid gainsboro;font-family: Mier book;font-weight: bolder;">Investor<br> Relations</a>
+              </li>
+              <li class="nav-item dropdown me-4">
+                <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: Mier book;font-weight: bolder;">
+                    <i class="fa fa-user ms-3" style="font-size:25px;color:black;"></i><br> Profile
+                </a>
+                <ul class="dropdown-menu">
+                    <h5>Hello User</h5>
+                     <h6 style="font-size:10px;">To access your Meesho account</h6>
+                     <div class="dropdown ms-4">
+                      <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="background-color: purple;">
+                        Sign Up
+                      </button>
+                      <form class="dropdown-menu p-4">
+                        <div class="mb-3">
+                          <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                            <label class="form-check-label" for="dropdownCheck2">
+                              Remember me
+                            </label>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                      </form>
+                    </div>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#"> <i class="fa fa-shopping-bag" style="font-size:25px;color:red"></i>My Order</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Delete Account</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"style="font-family: Mier book;font-weight: bolder;"><i class="fa fa-shopping-cart" style="font-size:25px;color:black"></i><br> Cart</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<nav class="navbar navbar-expand-lg navbar-light p-1 border border-secondary">
+<div class="d-inline-flex p-2 bd-highlight ms-3">
+        <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+          Women Ethnic
+        </a>
+        <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+        <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Women Western
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Men
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Kids
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Home & Kitchen
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Beauty & Health
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Jewellery & Accessories
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Bags & Footwear
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Electronics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <a class="one"  data-bs-toggle="dropdown" aria-expanded="false">
+            Sports & Fitness
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+</div>
+
+</nav>
+
+<div class="container-fluid mt-3">
+  <div class="card text-bg-dark">
+    <img class="img-fluid" src="./images/banner.webp" alt="New York" width="100%" height="500"> 
+    <div class="card-img-overlay" style="margin-right:110px; margin-top:100px;">
+      <div class="float-end">
+        <h3 style="color: white;font-weight: bolder;font-size:40px;">Smart Shopping<br>
+            Trusted by Millions</h3>
+        <button type="button" class="btn btn-light btn-lg mt-2" style="width:150px;color:purple;height:60px;font-size:20px;font-weight:500;">Shop Now</button>
+      </div><br>
+    </div>
+  </div>
+</div>
+
+  
+ <div class="container-fluid bg-light mt-3 border border-secondary rounded-2">
+    <div class="d-flex p-1 justify-content-center">
+      <a class="navbar-brand ms-5" href="#">
+      <img src="./images/returns.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      7 Days Easy Return
+    </a>
+    <a class="navbar-brand ms-5" href="#">
+      <img src="./images/cod.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Cash on Delivery
+    </a>
+    <a class="navbar-brand ms-5" href="#">
+      <img src="./images/lowest-price.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Lowest Price
+    </a>
+    </div>
+ </div>
+
+ <div class="container-fluid bg-light mt-3">
+  <div class="d-flex">
+    <div class="card border border-0 bg-light ms-5">
+      <img src="./images/ethnic.webp" alt="Cinque Terre" width="150" height="100"> 
+      <div class="card-body bg-light">
+        <h4 class="card-title ms-3" style="font-size: smaller;">Ethnic Wear</h4>
+      </div>
+    </div>
+    <div class="card border border-0 bg-light ms-4">
+      <img src="./images/westren.webp" alt="Cinque Terre" width="150" height="100"> 
+      <div class="card-body bg-light">
+        <h4 class="card-title ms-3" style="font-size: smaller;">Western Dresses</h4>
+      </div>
+    </div>
+    <div class="card border border-0 bg-light ms-4">
+      <img src="./images/menswear.webp" alt="Cinque Terre" width="150" height="100"> 
+      <div class="card-body bg-light">
+        <h4 class="card-title ms-3" style="font-size: smaller;">Menswear</h4>
+      </div>
+    </div>
+    <div class="card border border-0 bg-light ms-4">
+      <img src="./images/footwear.webp" alt="Cinque Terre" width="150" height="100"> 
+      <div class="card-body bg-light">
+        <h4 class="card-title ms-3" style="font-size: smaller;">Footwear</h4>
+      </div>
+    </div>
+    <div class="card border border-0 bg-light ms-4">
+      <img src="./images/home decor.webp" alt="Cinque Terre" width="150" height="100"> 
+      <div class="card-body bg-light">
+        <h4 class="card-title ms-3" style="font-size: smaller;">Home Decor</h4>
+      </div>
+    </div>
+    <div class="card border border-0 bg-light ms-4">
+      <img src="./images/beauty.webp" alt="Cinque Terre" width="150" height="100"> 
+      <div class="card-body bg-light">
+        <h4 class="card-title ms-3" style="font-size: smaller;">Beauty</h4>
+      </div>
+    </div>
+    <div class="card border border-0 bg-light ms-4">
+      <img src="./images/accessories.webp" alt="Cinque Terre" width="150" height="100"> 
+      <div class="card-body bg-light">
+        <h4 class="card-title ms-3" style="font-size: smaller;">Accessories</h4>
+      </div>
+    </div>   
+  </div>
+ </div>
+
+ <div class="container-fluid mt-3">
+  <div class="card text">
+    <img class="img-fluid" src="./images/banner1.webp" alt="New York" width="100%" height="500"> 
+   <div class="card-img-overlay" style="margin-right:110px; margin-top:50px;">
+     <button type="button" class="btn btn-light btn-lg mt-2" style="width:150px;color:rgb(255, 209, 130);height:60px;font-size:20px;margin-left:150px;margin-bottom:-720px;background-color:rgb(63, 31, 17);border: 1px solid rgb(255, 209, 130);font-weight: 500;cursor: pointer;transition: 0.2s;">Shop Now</button>
+      <div class="float-end">
+      
+    <img src="./images/lengha.webp" class="rounded-4 ms-5 mb-5" alt="..." width="120" height="150">
+    <img src="./images/menwear.webp" class="rounded-4 ms-5 mb-5" alt="..." width="120" height="150"><br>
+    <img src="./images/saree.webp" class="rounded-4 ms-5 mt-5" alt="..." width="120" height="150">
+    <img src="./images/jewellery.webp" class="rounded-4 ms-5 mt-5" alt="..." width="120" height="150">
+      </div><br>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt-3">
+  <div class="d-flex justify-content-between  mb-3">
+    <div class="p-2 ms-5" style="font-size:30px;font-weight: bolder;font-family: Mier book;">Original Brands</div>
+    <a><div class="p-2" style="font-size:20px;font-weight: bolder;font-family: Mier book;color: purple;">VIEW ALL</div></a>
+  </div>
+  <div class="container-fluid mt-1">
+    <div class="d-inline-flex p-2 ms-4">
+    <img src="./images/personal care.webp" class="rounded-4" alt="..." width="150" height="250">
+    <img src="./images/electronic.webp" class="rounded-4 ms-4" alt="..." width="150" height="250">
+    <img src="./images/makeup.webp" class="rounded-4 ms-4" alt="..." width="150" height="250">
+    <img src="./images/smartphone.webp" class="rounded-4 ms-4" alt="..." width="150" height="250">
+    <img src="./images/men perfume.webp" class="rounded-4 ms-4" alt="..." width="150" height="250">
+    <img src="./images/bags.webp" class="rounded-4 ms-4" alt="..." width="150" height="250">
+    <img src="./images/footwears.webp" class="rounded-4 ms-4" alt="..." width="150" height="250">
+  </div>
+  </div>
+</div>
+
+  <div class="mt-5 p-3 bg-secondary-subtle text-secondary-emphasis">
+   <marquee><div class="container-fluid">
+    <img src="./images/nivea.webp" class="rounded-4 ms-5 mt-4 border border-3 bg-light" alt="..." width="300" height="100">
+    <img src="./images/mamearth.webp" class="rounded-4 ms-4 mt-4 border border-3" alt="..." width="300" height="100">
+    <img src="./images/microsoft.webp" class="rounded-4 ms-4 mt-4 border border-3" alt="..." width="300" height="100">
+    <img src="./images/himalaya.webp" class="rounded-4 ms-4 mt-4 border border-3" alt="..." width="300" height="100">
+    <img src="./images/wild stone.webp" class="rounded-4 ms-4 mt-4 border border-3" alt="..." width="300" height="100">
+    <img src="./images/wow.webp" class="rounded-4 ms-4 mt-4 border border-3" alt="..." width="300" height="100">
+    <img src="./images/bata.webp" class="rounded-4 ms-4 mt-4 border border-3 bg-light" alt="..." width="300" height="100">
+    <img src="./images/plam.webp" class="rounded-4 ms-4 mt-4 border border-3" alt="..." width="300" height="100">
+   </div></marquee>
+  </div>
+
+<div class="container-fluid mt-3">
+  <div class="card text-bg-dark">
+    <img class="img-fluid" src="./images/bnner2.webp" alt="New York" width="100%" height="500"> 
+    <div class="card-img-overlay" style="margin-right:110px; margin-top:50px;">
+      <button type="button" class="btn btn-light btn-lg mt-2" style="width:150px;color:purple;height:60px;font-size:20px;margin-left:40px;margin-bottom:-350px;background-color:white;border: 1px solid rgb(255, 209, 130);font-weight: 500;cursor: pointer;transition: 0.2s;">Shop Now</button>
+      <div class="float-end">
+        <div class="d-inline-flex p-2">
+<div class="" style="width:150px;">
+  <img src="./images/summer dresses.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text" style="background-color: white;border-radius:5px;height:30px;color: purple;">Summer Dress</p>
+  </div>
+</div>
+<div class="ms-3" style="width:150px;">
+  <img src="./images/baggy jeans.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text" style="background-color: white;border-radius:5px;height:30px;color: purple;">Baggy Jeans</p>
+  </div>
+</div>
+<div class="ms-3" style="width:150px;">
+  <img src="./images/earings.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text" style="background-color: white;border-radius:5px;height:30px;color: purple;">Earings</p>
+  </div>
+</div>
+<div class="ms-3" style="width:150px;">
+  <img src="./images/chic flats.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text" style="background-color: white;border-radius:5px;height:30px;color: purple;">Chic Flats</p>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt-5">
+  <h4>Products For You</h4>
+  <div class="row ">
+  <div class="col-3">
+<select class="form-select mt-3" aria-label="Default select example">
+  <option selected>Sort By :<b>Relevence</b></option>
+  <option value="1">Relevance</option>
+  <option value="2">New Arrivals</option>
+  <option value="3">Three</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+<div class="conatiner border border-1 mt-3">
+    <a class="nav-link mt-3  border-bottom border-secondary" href="#item-2">FILTERS<br>1000+ Product</a>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary " aria-label=" select example" >
+      <option selected >Category </option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Gender </option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>color </option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Fabric</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Dail Shape</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Size</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Prize</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Occession</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Combo</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Category </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Discount</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Reversible</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>offer</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Used For</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Messho Mall </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Meesho Gold </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Fit/ Size </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Materials </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Rating </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Discount</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Bottom Type</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Bottom Pattern </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Print or Pattern Type </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Bottemwear</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Bottomwear Fabric </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Oramentaion</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Mobile Cover</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Border</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Bottom Style</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Surface Style</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Wraist Watch </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Brands</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Clock Wall </option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Top Type</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Shoes</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>socks</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Shirt</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Saree</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>T-Shirts</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select><select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Underwear</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Ladies Suit</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>Belts</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+    <select class="form-select mt-2 border border-0 border-bottom border-secondary" aria-label=" select example">
+      <option selected>slippers</option>
+      <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+    </select>
+</div> 
+  </div>
+
+<div class="col-8 ms-5">
+  <div class="row  row-cols g-4">
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-3">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image1.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>380</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-3">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image2.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>270</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image3.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>260</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image4.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>340</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image5.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>320</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image6.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>330</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image7.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>350</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image8.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image9.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image11.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image12.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image13.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image14.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image15.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image16.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image17.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image18.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image19.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image20.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image21.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image22.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image23.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image24.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image25.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image26.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image27.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image28.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image29.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image30.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image31.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image32.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image33.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image34.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image35.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image36.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image37.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image38.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image39.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image40.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image41.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image42.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image43.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image44.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image45.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image46.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image47.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image48.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image49.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image50.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image51.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image52.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image53.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image54.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image55.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image56.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image57.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image58.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="image59.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image60.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image61.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image62.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image63.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image64.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image65.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image66.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image67.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">84362 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image67.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">free Delivery</a> 
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.7<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">77651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image68.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light mt-2" href="#" role="button">free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.2<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">87651 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image69.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image69.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:195px;">
+        <img src="./images/image69.webp" class="four" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" style="color:darkgray;">Ladies Suit</h6>
+          <h5 class="card-title mt-3"> <i class="fa fa-rupee me-1 mt-3"></i>300</h5>
+          <a class="btn btn-light" href="#" role="button">Free Delivery</a>
+          <div class="d-flex justify-content-between  mb-3 mt-2">
+            <div class="bg-success rounded-pill" style="color:white;">4.5<span class="fa fa-star checked" style="color:white;"></span></div>
+            <div class="me-2">12345 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+    
+    
+
+  </div>
+</div>
+
+<div class="mt-5 p-3 bg-secondary-subtle text-secondary-emphasis"> 
+
+   <div class="d-flex flex-wrap align-content-start" style="height:300px">
+    <div class="p-2 border">
+     <h3 >Shop Non-Stop On Meesho</h3><br>
+    <h4>Trust More Than 1 Crore Indians<br>
+    Cash On Delivery|Free Delivery</h4>
+  <div class="d-flex justify-content-between me-3 mb-3">
+    <div class="p-2">
+      <img src="./images/appstore-icon-big_400.webp" class="rounded me-3" alt="..." width="200" height="50">
+      <img src="./images/playstore-icon-big_400.webp" class="rounded" alt="..." width="200" height="50"> 
+    </div>
+  </div> 
+    </div>
+    <div class="p-2 border">
+      <p style="color: rgb(85, 83, 83);font-weight: bolder;font-size:15px;">Carrer</p>
+      <p style="color: rgb(85, 83, 83);font-weight: bolder;font-size:15px;">Become a <br>supplier</p>
+      <p style="color: rgb(85, 83, 83);font-weight: bolder;font-size:15px;">Hall of Fame</p>
+      <p style="color: rgb(85, 83, 83);font-weight: bolder;font-size:15px;">Sitemap</p>
+    </div>
+    <div class="p-2 border">
+      <p style="color: rgb(85, 83, 83);font-weight: bolder;font-size:15px;">Meesho Tech Blog</p>
+      <p style="color: rgb(85, 83, 83);font-weight: bolder;font-size:15px;">Notices and Returns</p>
+    </div>
+    <div class="p-2 border">
+      <div class="d-flex justify-content-between me-2 mb-3">
+        <i class="fa fa-facebook-square me-1" style="font-size:38px;color:red"></i>
+        <i class="fa fa-instagram ms-1" style="font-size:38px;color:red"></i>
+        <i class="fa fa-linkedin-square ms-1" style="font-size:38px;color:red"></i>
+        <i class="fa fa-twitter-square ms-1" style="font-size:38px;color:red"></i>
+        <i class="fa fa-youtube-square ms-1" style="font-size:38px;color:red"></i>
+      </div>
+    </div>
+    <div class="p-2 border">
+      Fashnear Technologies Private Limited,<br>
+CIN: U74900KA2015PTC082263<br>
+3rd Floor, Wing-E, Helios Business<br> Park,Kadubeesanahalli Village, Varthur Hobli,<br> Outer Ring Road Bellandur, Bangalore,<br> Bangalore South, Karnataka, India, 560103<br>
+E-mail address: query@meesho.com<br>
+© 2015-2025 Meesho.com
+    </div>
+ </div>
+</div>
+
+<div class="container-fluid mt-5">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          More About Messho
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <h3>Discover a World of Affordable Fashion & Everyday Essentials</h3><br>
+          <p style="color: darkgray;">Upgrade your wardrobe and stock your home with the latest trends and essentials at unbeatable prices. Meesho offers a vast selection of products across all categories, ensuring you find everything you need at a fraction of the cost.</p>
+          
+          <h3>Shop Millions of Products Across All Categories</h3><br>
+          <p style="color: darkgray;">From trendy fashion finds to essential homeware, Meesho is your one-stop shop for everything you need. Explore millions of products across 650+ categories, ensuring you find the perfect item for any occasion.</p>
+          
+          <h3>Latest Women's Fashion Is Right Here</h3><br>
+          <h4>Western Wear for Women</h4>
+          <p style="color: darkgray;">Are you looking to revamp your wardrobe with stylish and affordable pieces? Look no further than Meesho's extensive collection of women's western wear. Find trendy dresses, casual jeans, and comfortable tops suitable for any occasion. We constantly update our inventory with the latest trends, ensuring you stay on top of your fashion game. Browse our collection of funky jewelry and accessories to complete your look and express your unique style.</p>
+          
+          <h3>Accessories, Jewellery, and Footwear</h3><br>
+          <p style="color: darkgray;">Elevate your outfit and add a touch of personality with Meesho's diverse range of accessories. Choose from a wide selection of jewelry sets, handbags, belts, and footwear to complement your style. Whether you're searching for statement earrings or comfortable sneakers, we have everything you need to complete your look.</p>
+          
+          <h3>Largest Collection of Menswear and Accessories</h3><br>
+          <h4>Men’s Western Wear</h4>
+          <p style="color: darkgray;">Upgrade your casual or formal attire with Meesho's men's wear collection. We offer a vast selection of T-shirts, jeans, polos, coats, and shirts in all sizes. Our user-friendly search tool allows you to filter by size, color, and material, making it easy to find the perfect fit. Explore our collection of trendy accessories, including wallets, cufflinks, and bags, to add a touch of sophistication to your look.</p>
+          
+          <h3>Men's Ethnic Wear</h3><br>
+          <p style="color: darkgray;">Need a new sherwani or any Indian Attire for an upcoming wedding function? Check out our latest men's ethnic wear collection, which has a range of budget-friendly styles to choose from, so you're sure to find something that fits your needs. Whether you're looking for a Sherwani set, Kurta pajamas or kurta, or an ethnic jacket, we've got it all!</p>
+          
+          <h3>Men’s Accessories and Footwear</h3><br>
+         <p style="color: darkgray;"> No one beats the quality & assurance of our men's styling products. From men's accessories to the latest footwear collection, we have picked out something for you, your better half, or your brother! Shop our online collection of items like men's wallets, cufflinks, bags for men, belts, rings, and more. Remember to check out our latest footwear for men. We have everything you need - from vibrant sneakers to formal office wear shoes to casual/ daily wear flip-flocks. So don't waste another minute. Get yourself some accessories today!</p>
+          
+          <h3>Top Quality Beauty & Personal Care Products</h3><br>
+          <p style="color: darkgray;">With thousands of different cosmetic brands and products, finding the right skincare, haircare & makeup products for you can be overwhelming. Despite a lot of reach, you sometimes buy lousy quality products that break you out, causing skin irritation & redness. We are here to help you and bring only the best makeup/ beauty products and skincare that not only nourish your skin & prevent further damage. Not only that, we have every makeup need, from foundations, makeup removers, and concealers to primer, mascara, eye shadow, and lipsticks.</p>
+          
+          <h3>Baby Care & Kids Fashion Wear</h3><br>
+          <p style="color: darkgray;">Parenthood calls for constant buying of new clothes for your kids! Whether you're looking for trendy baby clothes or just want affordable and trendy kidswear, we've got you covered. You'll find everything from pink rompers and dresses for girls to sets and jeans for boys. Plus, we have ethnic wear and accessories for all ages of kids, from newborns to grown-ups. Click on baby care to shop for all your basic needs.</p>
+          
+          <h3>Shop Home Decor & Kitchen Products, Electronics, and Much More</h3><br>
+         <h4> Kitchen Products</h4><br>
+          <p style="color: darkgray;">If you want to elevate your kitchen space, then you've come to the right place! Discover and browse a wide variety of top-quality home products, kitchen essentials like cooking utensils and serveware, kitchen storage, appliances like blenders, choppers, cooktops, and more! We are dedicated to providing our customers with the highest quality products at the most reasonable prices. Shop everything you need to spice up your kitchen and home! Happy shopping!</p>
+          
+          <h3>Home Utility and Essentials</h3><br>
+          <p style="color: darkgray;">Home styling is not just a trend but a necessity of the hour for every home - it keeps your surroundings fresh, renovated, and aesthetic. But of course, you only want to spend what you have to. That's where Meesho comes in! We've got excellent prices on all kinds of home furnishing items like lamps, bedsheets, planters, curtains, cushions, and more. Plus, we constantly refresh our best home decor items so you can always stay on top of the latest trends. Hurry, cart everything you need!</p>
+          
+          <h3>Electronics and Accessories</h3><br>
+          <p style="color: darkgray;">At Meesho, you can access various gadgets and essentials for your electronic devices. Here, you'll find everything from chargers and headphones to data cables and even external battery packs. Every month, we offer different sales and discounts on products, allowing you to save on your favorite essentials. Here, you can find the perfect gift for everyone on your list without breaking your budget!</p>
+          
+          <h3>Health, Fitness & Sports</h3><br>
+          <p style="color: darkgray;">Health is wealth! We know how important it is for you to take care of your health and your family's fitness. To begin your healthcare journey, we have everything at our store. You will find a wide variety of fitness equipment, health supplements, foods, nuts, and many more at very affordable prices. So what are you waiting for? Get started with your home workouts by shopping for dumbbell sets, exercise bands, exercise mats, skipping ropes, sports kits, and more!</p>
+          
+          <h3>Office Supplies and Stationery</h3><br>
+          <p style="color: darkgray;">We have a wide range of stationery items which will help you stay tidy and organised. You can buy notebooks, diaries and notepads and craft supplies which are great for school and college, or you can buy office supplies which are great for adults. We have a variety of pens, pencils, and other stationery supplies to ensure that you have what you need to write down your thoughts, make lists and so much more.</p>
+          
+          
+          <h3>Join the Meesho Community</h3><br>
+          <p style="color: darkgray;">For a seamless online shopping experience, feel free to download the Meesho App. With 50 Crore & counting happy customers, we believe in growing our community. To give you a hassle-free online shopping experience, plenty of user-friendly features will make your shopping online easier than ever. Meesho offers multiple payment options, debit and credit cards, UPI, and COD, to help you with a smooth checkout process. Suppose you are unhappy or receive a damaged product. In that case, you can raise your concern with our expert team to immediately return them or get a full refund without questions. For any queries or concerns, send us an email at query@meesho.com. You can also contact us on social media through Facebook, Instagram, or Twitter. We're here to help you.</p>
+          
+          <h3 style="color: purple;">Download Meesho App Now</h3><br>
+          <h4>More Than Just Shopping</h4><br>
+         <p style="color: darkgray;"> Apart from shopping and browsing, you can also earn money! Become a seller on Meesho and turn your passion into profit. Explore our wholesale pricing, easily share products with your network, and earn a commission on every sale. </p>
+          
+          <h3>Online Shopping</h3><br>
+          <h4>Baby</h4><br>
+          <p style="color: purple;">Baby Blanket | Baby Hanging Cradle | Baby Pillows | Baby Sleeping Bag | Baby Towels</p><br>
+          <h3>Electronics & Accessories</h3><br>
+          <p style="color: purple;">Android Smart Watches | Bluetooth Earphones | Bluetooth Speakers | Car Mobile Holders | Car Mobile Holders | CCTV Cameras | Data Cables | Digital Photo Frames | Dongle | Earphones | Fast Charging Power Banks | Headphones | Keyboard | Laptop Accessories | Laptop Bags | Memory Cards | Microphone | Mobile Chargers | Mouse | On Ear Headphones | Pen Drives | Speakers | Spy Cameras | Sport Headphones | VR Box | Diwali Lightings</p>
+          <h3>Home & Kitchen</h3><br>
+         <p style="color: purple;"> Aprons | Choppers | Chopping Boards | Cookers | Cutlery | Food Processors | Food Strainers | Funnels | Graters | Hand Blender | Ice Cube Trays | Ice Cream Scoops | Jars & Container | Juicer | Kitchen Gloves | Kitchen Mat | Kitchen Scissors | Kitchen Towel | Knives | Lunch Boxes | Mashers | Measuring Cups | Mixer Grinder | Napkins Holder | Racks & Holders | Roti Maker | Salt & Pepper Shakers | Sandwich Maker | Spice Racks | Table Cover | Thermos & Flasks | Toaster | Tongs | Trivets | Water Bottles</p>
+          <h3>Home & Living</h3><br>
+          <p style="color: purple;">Bean Bags | Bedding Sets | Blankets | Coasters | Cotton Bedsheets | Cotton Towel | Cushions | Curtains & Sheers | Decorative Items | Duvet Covers | Face Towels | Home Temple | Pillow Covers | Round Cushions | Single Bed Sheet | Sofa Covers | Trays | Yoga mats
+         <h3> Kids</h3><br>
+          <p style="color: purple;">Girls Stylish Tops | Kids Blazers | Kids Ethnic Gowns | Kids Ethnic Jackets | Kids Kurtis & Kurtas | Kids Lunch Boxes | Kids Salwar Suit Sets | Rompers | Tshirts Boys
+         <h3> Men Accessories</h3><br>
+          <p style="color: purple;">Gold Jewellery Men | Hair Spray For Men | Leather Watches Men | Men Crossbody Bags | Men Keychains | Men Scarves | Men Shirt Studs | Men Socks | Men Wrist Bands
+          <h3>Men Ethnicwear</h3><br>
+          <p style="color: purple;">Men Dhoti Kurtas | Men Dhotis | Men Indo Western Dresses | Men Velvet Sherwanis</p>
+         <h3> Men Footwear</h3><br>
+         <p style="color: purple;"> Leather Loafers Men | Men Sandals | Reebok Sports Shoes Men</p>
+         <h3> Men Western Wear</h3><br>
+          <p style="color: purple;">Cotton Shorts Men | Denim Jeans Men | Formal Shirts Men | Formal Trousers Men | Grey Blazers | Leather Jackets Men | Men Active Shorts | Men Sweaters | Men Trunks | Printed Briefs Men | Printed Tshirts | Sleeveless Sweatshirts Men | Sport Jackets Men | Sport Tracksuits Men | Vests | Wool Jackets Men</p>
+          <h3>Personal Care & Wellness</h3><br>
+          <p style="color: purple;">Bb Cream | Beard Oil | Body Scrub | Compact | Deodorants | Eye Lenses | Face Steamers | Hair Care | Hair Color | Hair Steamers | Lip Balm | Makeup Kits | Nail Cutter | Oximeter | Olive Oils | Oral Care | Soap | Talcum Powder | Tummy trimmer
+         <h3> Women Accessories</h3><br>
+         <p style="color: purple;"> Ankle Socks Women | Bindis | Briefcases | Bridal Anklets | Cateye Sunglasses | Chandbali Earrings | Clutches | Hair Accessories | Handbags | Hijabs | Hoop Earrings | Jewellery Set | Maangtika | Multi Necklace | Nosepins | Oxidised Ring | Pashmina Shawls | Potlis | Pouches | Rucksacks | Small Travel Bags | Stud Earrings Women | Trolley Bags | Umbrellas | Waist Bags</p>
+         <h3>Women Ethnicwear</h3>
+          <p style="color: purple;">Abaya | Black Kurta | Blouse Piece | Chikankari Kurtis | Designer Lehenga | Designer Suits | Kurti Fabric | Petticoats | Phulkari Dupatta | Puff Sleeve Blouses | Sharara | Silk Saree | Velvet Shawls</p>
+          <h3>Women Footwear</h3><br>
+         <p style="color: purple;"> Bellies | Juttis & Mojaris | Women Slippers</p>
+         <h3> Women Western Wear</h3><br>
+          <p style="color: purple;">Ankle Length Leggings | Black Camisoles | Black Jeggings | Body shapers | Capris | Chikankari Palazzos | Cotton Bathrobes | Denim Women Shorts | Designer Gown | Fancy Ladies Sweater | Flared Jeans | Jacket Dresses | Kaftans | Lace Lingerie Sets | Lingerie Sets | Long Tops Women | Maternity Wear | Pencil Skirts | Phulkari Dupatta | Petticoats | Printed Leggings | Push Up Bra | Short Night Dress | Shrugs | Satin Night Suit | Swimwear | Tights | Tshirt Dresses | Women Frocks | Women Jackets | Women Night Suits | Women Pyjamas | Women Slippers | Women Sweatshirts | Women Thermal Set | Women Trousers</p>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

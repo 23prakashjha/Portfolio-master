@@ -1,0 +1,159 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color:white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  font-size:40px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #B923E1;
+  font-weight: bolder;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-menu li {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #B923E1;
+  font-weight: bolder;
+  font-size:20px;
+}
+
+/* Connect button */
+.nav-connect {
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(185, 35, 225, 0.3);
+}
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* MOBILE SPECIFIC (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;          /* Make navbar horizontal */
+    justify-content: space-between; /* Space between logo and right-menu */
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Right menu (Connect + Hamburger) */
+  .right-menu {
+    gap: 12px;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+  }
+
+  /* Nav menu is hidden by default */
+  .nav-menu {
+    display: none;
+    flex-direction:inherit;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    position: absolute;          /* So it drops below the navbar */
+    top: 70px;                   /* Height of navbar (adjust if needed) */
+    left: 0;
+    z-index: 998;
+  }
+
+  /* Show menu when active */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    color: black;
+    width: 100%;
+    display: block;
+  }
+
+  /* Adjust connect button */
+  .nav-connect {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 30px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+/* For smaller mobile (480px and below) you can add */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-connect {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

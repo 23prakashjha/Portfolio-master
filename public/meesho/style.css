@@ -1,0 +1,28 @@
+.one{
+    text-decoration:none;
+    color: rgb(107, 105, 105);
+    cursor: pointer;
+    margin-right:25px;
+    font-family: Mier book;
+    font-weight: bolder;
+}
+.one:hover{
+    text-decoration: underline 5px solid purple;
+}
+.dropdown-menu{
+    width:100%;
+}
+.two{
+    margin-left:850px;
+    margin-top:-280px;
+}
+.four{
+    width:193px;
+    height:248px;
+}
+.five{
+    font-size:15px;
+    color: lightslategray;
+    font-family: Mier book;
+
+}

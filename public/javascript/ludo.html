@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Ludo Board</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      aspect-ratio: 1/1;
+      width: 90vmin;
+      max-width: 600px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container1,
+    .container2,
+    .container3 {
+      display: flex;
+      flex: 1;
+    }
+
+    .row1-col1,
+    .row1-col3,
+    .row3-col1,
+    .row3-col3,
+    .row1-col2,
+    .row3-col2,
+    .row2-col1,
+    .row2-col3 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .row1-col1,
+    .row1-col3,
+    .row3-col1,
+    .row3-col3 {
+      flex: 4;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .row1-col2,
+    .row3-col2 {
+      flex: 2;
+    }
+
+    .row2-col1,
+    .row2-col3 {
+      flex: 3;
+    }
+
+    .row2-col2 {
+      flex: 2;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+      width: 80%;
+      height: 80%;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5%;
+    }
+
+    .box1 div,
+    .box2 div,
+    .box3 div,
+    .box4 div {
+      width: 40%;
+      height: 40%;
+      margin: 5%;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .green {
+      background-color: green;
+    }
+    .red {
+      background-color: red;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .white {
+      background-color: white;
+    }
+
+    /* Path styling */
+    .row1-col2 div,
+    .row3-col2 div,
+    .row2-col1 div,
+    .row2-col3 div {
+      width: 33.33%;
+      height: 16.66%;
+      border: 0.5px solid black;
+    }
+
+    .row2-col1 div,
+    .row2-col3 div {
+      width: 16.66%;
+      height: 33.33%;
+    }
+
+    /* Center triangle */
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 30px solid green;
+      border-right: 30px solid blue;
+      border-top: 30px solid red;
+      border-bottom: 30px solid yellow;
+    }
+
+    @media (max-width: 600px) {
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        width: 90%;
+        height: 90%;
+      }
+
+      .row1-col2 div,
+      .row3-col2 div,
+      .row2-col1 div,
+      .row2-col3 div {
+        width: 33.33%;
+        height: 16.66%;
+      }
+
+      .row2-col1 div,
+      .row2-col3 div {
+        width: 16.66%;
+        height: 33.33%;
+      }
+
+      .triangle {
+        border-left: 20px solid green;
+        border-right: 20px solid blue;
+        border-top: 20px solid red;
+        border-bottom: 20px solid yellow;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top Row -->
+    <div class="container1">
+      <div class="row1-col1 green">
+        <div class="box1">
+          <div class="green"></div>
+          <div class="green"></div>
+          <div class="green"></div>
+          <div class="green"></div>
+        </div>
+      </div>
+      <div class="row1-col2">
+        <div></div><div></div><div></div>
+        <div></div><div class="red"></div><div class="red"></div>
+        <div></div><div class="red"></div><div></div>
+        <div></div><div class="red"></div><div></div>
+        <div></div><div class="red"></div><div></div>
+        <div></div><div class="red"></div><div></div>
+      </div>
+      <div class="row1-col3 red">
+        <div class="box2">
+          <div class="red"></div>
+          <div class="red"></div>
+          <div class="red"></div>
+          <div class="red"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Row -->
+    <div class="container2">
+      <div class="row2-col1">
+        <div></div><div class="green"></div><div></div>
+        <div></div><div></div><div></div>
+        <div></div><div class="green"></div><div class="green"></div>
+        <div class="green"></div><div class="green"></div><div class="green"></div>
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+      </div>
+      <div class="row2-col2">
+        <div class="triangle"></div>
+      </div>
+      <div class="row2-col3">
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+        <div class="blue"></div><div class="blue"></div><div class="blue"></div>
+        <div class="blue"></div><div class="blue"></div><div></div>
+        <div></div><div></div><div></div>
+        <div></div><div class="blue"></div><div></div>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="container3">
+      <div class="row3-col1 yellow">
+        <div class="box3">
+          <div class="yellow"></div>
+          <div class="yellow"></div>
+          <div class="yellow"></div>
+          <div class="yellow"></div>
+        </div>
+      </div>
+      <div class="row3-col2">
+        <div></div><div class="yellow"></div><div></div>
+        <div></div><div class="yellow"></div><div></div>
+        <div></div><div class="yellow"></div><div></div>
+        <div></div><div class="yellow"></div><div></div>
+        <div class="yellow"></div><div class="yellow"></div><div></div>
+        <div></div><div></div><div></div>
+      </div>
+      <div class="row3-col3 blue">
+        <div class="box4">
+          <div class="blue"></div>
+          <div class="blue"></div>
+          <div class="blue"></div>
+          <div class="blue"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

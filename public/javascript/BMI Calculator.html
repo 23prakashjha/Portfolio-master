@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: darkred;
+        }
+
+        #bi {
+            background-color: #f9f9f9;
+        }
+
+        #ct {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        function calculate() {
+            var height = parseFloat(document.getElementById("ht").value);
+            var weight = parseFloat(document.getElementById("wt").value);
+
+            if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+                alert("Please enter valid height and weight.");
+                return;
+            }
+
+            // Convert height from cm to meters
+            var heightInMeters = height / 100;
+            var BMI = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+
+            document.getElementById("bi").value = BMI;
+            document.getElementById("ht").value = "";
+            document.getElementById("wt").value = "";
+
+            let category = "";
+
+            if (BMI < 18.5) {
+                category = "You're in the underweight range.";
+            } else if (BMI >= 18.5 && BMI < 25) {
+                category = "You're in the healthy weight range.";
+            } else if (BMI >= 25 && BMI < 30) {
+                category = "You're in the overweight range.";
+            } else {
+                category = "You're in the obese range.";
+            }
+
+            document.getElementById("ct").innerHTML = `<b>Category: </b>${category}`;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Calculate Body Mass Index</h1>
+
+    <div class="container">
+        <div class="form-group">
+            <label for="ht">Your Height (in cm):</label>
+            <input type="number" id="ht" placeholder="e.g. 170">
+        </div>
+
+        <div class="form-group">
+            <label for="wt">Your Weight (in kg):</label>
+            <input type="number" id="wt" placeholder="e.g. 65">
+        </div>
+
+        <div class="form-group">
+            <input type="button" class="btn" value="Compute BMI" onclick="calculate()">
+        </div>
+
+        <div class="form-group">
+            <label for="bi">Your BMI:</label>
+            <input type="number" id="bi" readonly>
+        </div>
+
+        <span id="ct"></span>
+    </div>
+
+</body>
+</html>
