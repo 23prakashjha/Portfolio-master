@@ -12,6 +12,13 @@ import ludo from '../assets/ludo.PNG';
 import olevel from '../assets/olevel.PNG';
 import spotify from '../assets/spotify.PNG';
 import marks from '../assets/marks.PNG';
+import flipkart from '../assets/flipkart.PNG';
+import Bikewala from '../assets/Bikewala.PNG';
+import fooddel from '../assets/fooddel.PNG';
+import Burger from '../assets/Burger.PNG';
+import ielts from '../assets/ielts.PNG';
+import mern from '../assets/mern.PNG';
+import assignment from '../assets/assignment.PNG';
 
 
 const projectData = [
@@ -23,15 +30,22 @@ const projectData = [
     code: 'https://github.com/23prakashjha/Grocery-App.git',
   },
   {
-    title: 'FlipKart Clone Website',
+    title: 'Clothing Website',
     image: Ecommerce,
+    description: 'This is html, css and javascript project with cart functionality and more.',
+    live: 'https://e-commerce-sable-one-16.vercel.app/',
+    code: 'https://github.com/23prakashjha/E-commerce.git',
+  },
+  {
+    title: 'FlipKart Clone Website',
+    image: flipkart,
     description: 'This is html, css and javascript project with cart functionality and more.',
     live: 'https://flipkart-clone-beta-seven.vercel.app/',
     code: 'https://github.com/23prakashjha/E-commerce.git',
   },
    {
     title: 'BikeStore Website',
-    image: Ecommerce,
+    image: Bikewala,
     description: 'This is html, css and javascript project with cart functionality and more.',
     live: 'https://bike-store-phi.vercel.app/',
     code: 'https://github.com/23prakashjha/E-commerce.git',
@@ -59,14 +73,14 @@ const projectData = [
   },
    {
     title: 'E-Commerce Website',
-    image: Ecommerce,
+    image:Burger,
     description: 'React-based e-commerce project with cart functionality and more.',
     live: 'https://stupendous-snickerdoodle-76bff4.netlify.app/',
     code: 'https://github.com/23prakashjha/E-commerce.git',
   },
    {
     title: 'E-Commerce Website',
-    image: Ecommerce,
+    image:fooddel,
     description: 'React-based e-commerce project with cart functionality and more.',
     live: 'https://enchanting-sprinkles-5fc281.netlify.app/',
     code: 'https://github.com/23prakashjha/E-commerce.git',
