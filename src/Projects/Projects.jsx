@@ -19,6 +19,7 @@ import Burger from '../assets/Burger.PNG';
 import ielts from '../assets/ielts.PNG';
 import mern from '../assets/mern.PNG';
 import assignment from '../assets/assignment.PNG';
+import studentapi from '../assets/studentapi.PNG';
 
 
 const projectData = [
@@ -37,53 +38,60 @@ const projectData = [
     code: 'https://github.com/23prakashjha/E-commerce.git',
   },
   {
+    title: 'Spotify Clone Website',
+    image: spotify,
+    description: 'This is Full-Stack Mern Project with have add images and crud operations and many fatures.',
+    live: 'https://spotify-clone-project-two.vercel.app/', // Replace with actual live link
+    code: 'https://github.com/23prakashjha/Spotify-Clone-Project.git',
+  },
+  {
     title: 'FlipKart Clone Website',
     image: flipkart,
     description: 'This is html, css and javascript project with cart functionality and more.',
     live: 'https://flipkart-clone-beta-seven.vercel.app/',
-    code: 'https://github.com/23prakashjha/E-commerce.git',
+    code: 'https://github.com/23prakashjha/Flipkart-Clone.git',
   },
    {
     title: 'BikeStore Website',
     image: Bikewala,
     description: 'This is html, css and javascript project with cart functionality and more.',
     live: 'https://bike-store-phi.vercel.app/',
-    code: 'https://github.com/23prakashjha/E-commerce.git',
+    code: 'https://github.com/23prakashjha/Bike-Store.git',
   },
    {
-    title: 'E-Commerce Website',
-    image: Ecommerce,
-    description: 'React-based e-commerce project with cart functionality and more.',
+    title: 'Student API',
+    image:studentapi,
+    description: 'This is the full Stack Mern Project with have add CRUD Operations can be perform them.',
     live: 'https://projects-coral-gamma.vercel.app/',
-    code: 'https://github.com/23prakashjha/E-commerce.git',
+    code: 'https://github.com/23prakashjha/student-api.git',
   },
    {
-    title: 'E-Commerce Website',
-    image: Ecommerce,
-    description: 'React-based e-commerce project with cart functionality and more.',
+    title: 'Assignment Project',
+    image:assignment,
+    description: 'This is html, css and javascript project with cart functionality and more.',
     live: 'https://assignment-seven-bice.vercel.app/',
-    code: 'https://github.com/23prakashjha/E-commerce.git',
+    code: 'https://github.com/23prakashjha',
   },
    {
-    title: 'E-Commerce Website',
-    image: Ecommerce,
-    description: 'React-based e-commerce project with cart functionality and more.',
+    title: 'Assignment-2 Project',
+    image: mern,
+    description: 'This is basically Full Stack Project with CRUD Operaetions can be performed them.',
     live: 'https://new-folder-2-amber-xi.vercel.app/',
-    code: 'https://github.com/23prakashjha/E-commerce.git',
+    code: 'https://github.com/23prakashjha',
   },
    {
-    title: 'E-Commerce Website',
+    title: 'Food Website',
     image:Burger,
     description: 'React-based e-commerce project with cart functionality and more.',
     live: 'https://stupendous-snickerdoodle-76bff4.netlify.app/',
-    code: 'https://github.com/23prakashjha/E-commerce.git',
+    code: 'https://github.com/23prakashjha/Website.git',
   },
    {
-    title: 'E-Commerce Website',
+    title: 'Food Delivery Website',
     image:fooddel,
     description: 'React-based e-commerce project with cart functionality and more.',
     live: 'https://enchanting-sprinkles-5fc281.netlify.app/',
-    code: 'https://github.com/23prakashjha/E-commerce.git',
+    code: 'https://github.com/23prakashjha/food-website.git',
   },
   {
     title: 'Meesho Clone Website',
@@ -105,13 +113,6 @@ const projectData = [
     description: 'Clone of Bollyfilix using HTML and CSS.',
     live: 'https://adorable-gaufre-af74c1.netlify.app/', // Replace with actual live link
     code: 'https://github.com/23prakashjha/Bollyfilix-clone.git',
-  },
-  {
-    title: 'Spotify Clone Website',
-    image: spotify,
-    description: 'Spotify clone made with HTML, CSS and JavaScript.',
-    live: 'https://spotify-clone-project-two.vercel.app/', // Replace with actual live link
-    code: 'https://github.com/23prakashjha/meesho-clone.git',
   },
   {
     title: 'Chess',
