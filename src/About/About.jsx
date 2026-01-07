@@ -30,7 +30,7 @@ const About = () => {
         {/* ✅ Correct Resume Download Button */}
         <a 
           className="about-btn" 
-          href="/prakash_resume.pdf"
+          href="/Prakash Jha.pdf"
           download
           target="_blank"
           rel="noopener noreferrer"

@@ -39,7 +39,7 @@ const Hero = () => {
         {/* Resume download button */}
         <a
           className="hero-resume"
-          href="/prakash_resume.pdf"
+          href="/Prakash Jha.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
