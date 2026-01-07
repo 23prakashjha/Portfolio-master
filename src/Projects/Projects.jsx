@@ -20,9 +20,41 @@ import ielts from '../assets/ielts.PNG';
 import mern from '../assets/mern.PNG';
 import assignment from '../assets/assignment.PNG';
 import studentapi from '../assets/studentapi.PNG';
+import Chat from '../assets/Chat.PNG';
+import quiz from '../assets/quiz.PNG';
+import theory from '../assets/theory.PNG';
+import vibe from '../assets/vibe.PNG';
 
 
 const projectData = [
+  {
+    title: 'QuizVerse Project',
+    image: quiz,
+    description: 'QuizVerse is a MERN Stack–based quiz application where users can add questions and take quizzes..',
+    live: 'https://quiz-project-blush-two.vercel.app/', // Replace with actual live link
+    code: 'https://github.com/23prakashjha/Quiz-Project.git',
+  },
+  {
+    title: 'Theory-Hub Project ',
+    image: theory,
+    description: 'Theory Hub is Mwn project with a web-based learning platform designed to provide theoretical content in a structured and user-friendly way add theory and learn them.',
+    live: 'https://theory-hub-project.vercel.app/', // Replace with actual live link
+    code: 'https://github.com/23prakashjha/theory-hub-project.git',
+  },
+  {
+    title: 'ChatBot Project',
+    image: Chat,
+    description: 'The Chatbot is Mern project with an interactive application designed to communicate with users in real time and provide instant responses to queries..',
+    live: 'https://chatbot-iota-rosy-39.vercel.app/', // Replace with actual live link
+    code: 'https://github.com/23prakashjha/chatbot.git',
+  },
+  {
+    title: 'VibeCart Project',
+    image: vibe,
+    description: 'VibeCart is Mern project with  a modern e-commerce is  web application designed to provide users with a smooth and engaging online shopping experience..',
+    live: 'https://vibe-cart-seven.vercel.app/', // Replace with actual live link
+    code: 'https://github.com/23prakashjha/vibe-cart.git',
+  },
   {
     title: 'Grocery Website',
     image: grocery,
