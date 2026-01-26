@@ -24,27 +24,44 @@ import Chat from '../assets/Chat.PNG';
 import quiz from '../assets/quiz.PNG';
 import theory from '../assets/theory.PNG';
 import vibe from '../assets/vibe.PNG';
+import Emern from '../assets/Emern.PNG';
+import mernfood from '../assets/mernfood.PNG';
 
 
 const projectData = [
   {
+    title: 'Food Delivery Website ',
+    image: mernfood,
+    description: 'This project is a MERN stack food delivery website built using MongoDB, Express.js, React, and Node.js. It provides a responsive and user-friendly platform for browsing food items and placing orders, focusing on efficient data handling, smooth UI, and scalable backend architecture.',
+    live: 'https://food-delivery-website-self-chi.vercel.app/', // Replace with actual live link
+    code: 'https://github.com/23prakashjha/food-delivery-website.git',
+  },
+  {
+    title: 'E-commerce Website',
+    image: Emern,
+    description: 'This project is a full-stack MERN e-commerce application developed using MongoDB, Express.js, React, and Node.js. It enables users to browse products, manage carts, and place orders through a secure and responsive interface, focusing on scalable backend APIs, dynamic product management, and smooth user experience.',
+    live: 'https://e-commerce-mern-three-alpha.vercel.app/', // Replace with actual live link
+    code: 'https://github.com/23prakashjha/E-commerce-Mern.git',
+  },
+  
+  {
     title: 'QuizVerse Project',
     image: quiz,
-    description: 'QuizVerse is a MERN Stack–based quiz application where users can add questions and take quizzes..',
+    description: 'This is a responsive online quiz application designed to test users’ knowledge through interactive questions and instant feedback. The focus is on a simple user interface, engaging question flow, and real-time scoring to deliver an intuitive and fun learning experience.',
     live: 'https://quiz-project-blush-two.vercel.app/', // Replace with actual live link
     code: 'https://github.com/23prakashjha/Quiz-Project.git',
   },
   {
     title: 'Theory-Hub Project ',
     image: theory,
-    description: 'Theory Hub is Mwn project with a web-based learning platform designed to provide theoretical content in a structured and user-friendly way add theory and learn them.',
+    description: 'This is a responsive educational platform designed to help users access and explore learning materials easily. Built with a focus on clear information structure, simple navigation, and reader-friendly layouts, the site enhances learning by making content accessible and engaging.',
     live: 'https://theory-hub-project.vercel.app/', // Replace with actual live link
     code: 'https://github.com/23prakashjha/theory-hub-project.git',
   },
   {
     title: 'ChatBot Project',
     image: Chat,
-    description: 'The Chatbot is Mern project with an interactive application designed to communicate with users in real time and provide instant responses to queries..',
+    description: 'This project is a responsive AI-powered chatbot web app that enables users to interact naturally and get instant responses. Designed with a clean interface and real-time messaging flow, it focuses on easy communication, engaging user experience, and interactive conversational design.',
     live: 'https://chatbot-iota-rosy-39.vercel.app/', // Replace with actual live link
     code: 'https://github.com/23prakashjha/chatbot.git',
   },
