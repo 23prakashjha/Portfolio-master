@@ -29,8 +29,8 @@ const Footer = () => {
           <h4>Follow Me</h4>
           <div className="social-icons">
             <a href="https://github.com/23prakashjha" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-            <a><i class="fa-brands fa-whatsapp"></i></a>
-           <a> <i class="fa-brands fa-linkedin"></i></a>
+            <a ><i class="fa-brands fa-whatsapp"></i></a>
+           <a > <i class="fa-brands fa-linkedin"></i></a>
             <a><i class="fa-brands fa-twitter"></i></a>
           </div>
         </div>

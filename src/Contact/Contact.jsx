@@ -40,11 +40,11 @@ const Contact = () => {
   <ul class="contact-list">
     <li>
       <i class="fas fa-envelope"></i>
-      <a href="mailto:prakashjha424@gmail.com">prakashjha424@gmail.com</a>
+      <a href="mailto:prakashjha424@gmail.com">jhaprakash2307@gmail.com</a>
     </li>
     <li>
       <i class="fas fa-phone"></i>
-      <a href="tel:+918920310738">+91 8920310738</a>
+      <a href="tel:+918920310738">+91 9220885478</a>
     </li>
     <li>
       <i class="fab fa-github"></i>
@@ -52,7 +52,7 @@ const Contact = () => {
     </li>
     <li>
       <i class="fab fa-linkedin"></i>
-      <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/prakash-jha-270264401" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </li>
   </ul>
 </section>

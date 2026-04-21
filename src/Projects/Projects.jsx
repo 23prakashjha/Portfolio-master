@@ -209,7 +209,7 @@ const projectData = [
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projectData : projectData.slice(0, 6);
+  const visibleProjects = showAll ? projectData : projectData.slice(0, 8);
 
   const toggleShowMore = () => setShowAll(!showAll);
 
