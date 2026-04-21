@@ -1,12 +1,12 @@
 import React from 'react'
 import './Hero.css'
-import wall from '../assets/wall.png'
+import profile from '../assets/profile.png'
 import { ReactTyped } from 'react-typed'
 
 const Hero = () => {
   return (
     <div className='hero' id='hero'>
-      <img src={wall} alt='Prakash Jha Profile' className='hero-img' />
+      <img src={profile} alt='Prakash Jha Profile' className='hero-img' />
 
       <h1>
         I'm Prakash Jha,{" "}
