@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hero.css'
-import back from '../assets/back.jpg'
+import wall from '../assets/wall.png'
 import { ReactTyped } from 'react-typed'
 
 const Hero = () => {
