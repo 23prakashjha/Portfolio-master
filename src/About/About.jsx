@@ -1,12 +1,12 @@
 import React from 'react';
 import './About.css';
-import back from '../assets/back.jpg'; // Make sure this image exists
+import wall from '../assets/wall.png'; // Make sure this image exists
 
 const About = () => {
   return (
     <div className="about-container" id="about">
       <div className="about-img">
-        <img src={back} alt="Prakash Jha" />
+        <img src={wall} alt="Prakash Jha" />
       </div>
 
       <div className="about-content">
