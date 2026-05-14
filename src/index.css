@@ -1,11 +1,185 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    height: 100vh;
-    background:white;
-    color:black;
-    font-family: 'outfit';
+:root {
+  --bg: #f8fbff;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: #ffffff;
+  --text: #14213d;
+  --muted: #5f6f89;
+  --primary: #0f9f8f;
+  --secondary: #f25f5c;
+  --accent: #f7b801;
+  --ink: #07111f;
+  --border: rgba(20, 33, 61, 0.12);
+  --shadow: 0 18px 50px rgba(20, 33, 61, 0.12);
+  --shadow-soft: 0 10px 30px rgba(20, 33, 61, 0.08);
+}
+
+:root[data-theme="dark"] {
+  --bg: #07111f;
+  --surface: rgba(13, 28, 48, 0.82);
+  --surface-strong: #0d1c30;
+  --text: #eaf7f5;
+  --muted: #9fb1c9;
+  --primary: #21d0bd;
+  --secondary: #ff7b78;
+  --accent: #ffd166;
+  --ink: #f8fbff;
+  --border: rgba(234, 247, 245, 0.14);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(15, 159, 143, 0.14), transparent 28rem),
+    radial-gradient(circle at top right, rgba(242, 95, 92, 0.12), transparent 25rem),
+    var(--bg);
+  color: var(--text);
+  font-family: "Oswald", "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+body::selection {
+  background: rgba(15, 159, 143, 0.24);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section,
+.hero,
+.about-container,
+.languages-container,
+.experience-container,
+.projects-container,
+.contact-container,
+.footer-container {
+  scroll-margin-top: 92px;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-heading {
+  color: var(--ink);
+  font-size: 42px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.section-copy {
+  color: var(--muted);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  max-width: 720px;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 900;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 900;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+:root[data-theme="dark"] .hero::before,
+:root[data-theme="dark"] .hero-stat,
+:root[data-theme="dark"] .availability-pill,
+:root[data-theme="dark"] .hero-tech-card,
+:root[data-theme="dark"] .about-strengths li,
+:root[data-theme="dark"] .about-cards div,
+:root[data-theme="dark"] .about-badge,
+:root[data-theme="dark"] .tabs,
+:root[data-theme="dark"] .project-filters,
+:root[data-theme="dark"] .language-item,
+:root[data-theme="dark"] .theory-content,
+:root[data-theme="dark"] .contact-section,
+:root[data-theme="dark"] .contact-form,
+:root[data-theme="dark"] .contact-list li {
+  background: var(--surface);
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .hero-img,
+:root[data-theme="dark"] .about-img img {
+  border-color: #132744;
+}
+
+:root[data-theme="dark"] .hero-visual::before,
+:root[data-theme="dark"] .about-img::before {
+  opacity: 0.82;
+}
+
+:root[data-theme="dark"] .project-card,
+:root[data-theme="dark"] .project-buttons a:last-child,
+:root[data-theme="dark"] .project-search,
+:root[data-theme="dark"] .feature-switch,
+:root[data-theme="dark"] .contact-form input,
+:root[data-theme="dark"] .contact-form textarea,
+:root[data-theme="dark"] .close-button {
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .theory-section li {
+  background: rgba(33, 208, 189, 0.1);
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 32px;
+  }
 }

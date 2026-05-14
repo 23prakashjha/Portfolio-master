@@ -6,10 +6,10 @@ const Languages = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(null);
 
   const languages = {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Bootstrap, Tailwind css'],
+    frontend: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Bootstrap, Tailwind CSS'],
     backend: ['Node.js', 'Express.js', 'Python', 'Java'],
     database: ['MongoDB', 'MySQL'],
-    Tools: ['Git', 'Github','Netlify', 'Vercel','Render'],
+    Tools: ['Git', 'GitHub','Netlify', 'Vercel','Render'],
   };
 
   const theoryData = {
@@ -86,7 +86,7 @@ const Languages = () => {
           'const items = data.map(item => <Item key={item.id} />);'
         ]
       },
-      'Bootstrap, Tailwind css': {
+      'Bootstrap, Tailwind CSS': {
         title: 'CSS Frameworks',
         content: [
           'Bootstrap is a popular CSS framework for responsive design',
@@ -236,7 +236,7 @@ const Languages = () => {
           'git merge feature-branch'
         ]
       },
-      'Github': {
+      'GitHub': {
         title: 'GitHub',
         content: [
           'GitHub is a web-based platform for hosting Git repositories',
@@ -313,7 +313,11 @@ const Languages = () => {
 
   return (
     <div className="languages-container" id="languages">
-      <h2>Languages Known</h2>
+      <span className="section-kicker">Skills Lab</span>
+      <h2 className="section-heading">Technologies I work with</h2>
+      <p className="section-copy">
+        A practical stack for building responsive interfaces, APIs, databases and production deployments.
+      </p>
       <div className="tabs">
         <button
           className={activeTab === 'frontend' ? 'tab active' : 'tab'}
@@ -347,19 +351,18 @@ const Languages = () => {
             className="language-item clickable" 
             key={index}
             onClick={() => setSelectedLanguage(lang)}
-            title="Click to view theory"
+            title="Click to view details"
           >
             {lang}
-            <span className="theory-hint">📚</span>
+            <span className="theory-hint">Learn</span>
           </div>
         ))}
       </div>
 
-      {/* Theory Modal */}
       {selectedLanguage && theoryData[activeTab]?.[selectedLanguage] && (
         <div className="theory-modal" onClick={() => setSelectedLanguage(null)}>
           <div className="theory-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={() => setSelectedLanguage(null)}>×</button>
+            <button className="close-button" onClick={() => setSelectedLanguage(null)} aria-label="Close details">x</button>
             <h3>{theoryData[activeTab][selectedLanguage].title}</h3>
             
             <div className="theory-section">

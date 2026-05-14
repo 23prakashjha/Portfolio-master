@@ -1,46 +1,69 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ theme, onToggleTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navItems = [
+    { label: 'Home', href: '#hero' },
+    { label: 'About', href: '#about' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Skills', href: '#languages' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
+  ];
 
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
   };
 
-  // Use effect to toggle body background color
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white';  // Optional: change text color for readability
-    } else {
-      document.body.style.backgroundColor = '';
-      document.body.style.color = '';
-    }
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
 
-    // Cleanup on unmount
     return () => {
-      document.body.style.backgroundColor = '';
-      document.body.style.color = '';
+      document.body.style.overflow = '';
     };
   }, [menuOpen]);
 
   return (
     <nav className="navbar">
-      <a href="#hero" className="logo">Prakash Jha</a>
+      <a href="#hero" className="logo" onClick={() => setMenuOpen(false)}>
+        <span>PJ</span>
+        Prakash Jha
+      </a>
 
-
-      {/* Nav Menu */}
       <ul className={`nav-menu ${menuOpen ? 'active' : ''}`} id="nav-menu">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#languages">Languages</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#footer">Footer</a></li>
+        {navItems.map((item) => (
+          <li key={item.href}>
+            <a href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
+          </li>
+        ))}
       </ul>
 
-      <a href="#contact" className="nav-connect">Connect With Me</a>
+      <div className="right-menu">
+        <button
+          className="theme-toggle"
+          type="button"
+          onClick={onToggleTheme}
+          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        >
+          <i className={theme === 'light' ? 'fa-solid fa-moon' : 'fa-solid fa-sun'}></i>
+        </button>
+        <a href="#contact" className="nav-connect" onClick={() => setMenuOpen(false)}>
+          Hire Me
+        </a>
+        <button
+          className={`hamburger ${menuOpen ? 'active' : ''}`}
+          type="button"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
   );
 };

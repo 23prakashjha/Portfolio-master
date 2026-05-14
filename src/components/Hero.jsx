@@ -4,47 +4,71 @@ import wall from '../assets/wall.png'
 import { ReactTyped } from 'react-typed'
 
 const Hero = () => {
+  const stats = [
+    { value: '25+', label: 'Projects Built' },
+    { value: 'MERN', label: 'Primary Stack' },
+    { value: '100%', label: 'Responsive Focus' },
+  ];
+
   return (
     <div className='hero' id='hero'>
-      <img src={wall} alt='Prakash Jha Profile' className='hero-img' />
+      <div className="hero-copy">
+        <span className="section-kicker">Full Stack Developer Portfolio</span>
+        <h1>
+          I'm Prakash Jha,{" "}
+          <ReactTyped
+            className="typed-text"
+            strings={[
+              'Full Stack Developer',
+              'Frontend Developer',
+              'Backend Developer',
+              'MERN Developer',
+              'Creative Coder',
+            ]}
+            typeSpeed={50}
+            backSpeed={30}
+            loop
+          />
+        </h1>
 
-      <h1>
-        I'm Prakash Jha,{" "}
-        <ReactTyped
-          className="typed-text"
-          strings={[
-            'Full Stack Developer',
-            'Frontend Developer',
-            'Backend Developer',
-            'Coder',
-            'Traveller',
-          ]}
-          typeSpeed={50}
-          backSpeed={30}
-          loop
-        />
-      </h1>
+        <p>
+          I build responsive, user-friendly web applications with React, Node.js,
+          Express.js, MongoDB and clean interface design.
+        </p>
 
-      <p>
-        I am a Full Stack Developer skilled in <strong>Frontend Technologies</strong><br />
-        such as HTML, CSS, and JavaScript, and <strong>Backend Technologies</strong> like Node.js, Express.js.<br />
-        I create interactive web experiences and I'm passionate about blending design aesthetics with functionality.<br />
-        Currently pursuing <strong>MCA</strong> from Gurugram University.
-      </p>
+        <div className="hero-action">
+          <a href="#projects" className="hero-connect">View Projects</a>
 
-      <div className="hero-action">
-        {/* Change button to anchor tag for proper navigation */}
-        <a href="#contact" className="hero-connect">Connect With Me</a>
+          <a
+            className="hero-resume"
+            href="/Prakash Jha.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My Resume
+          </a>
+        </div>
 
-        {/* Resume download button */}
-        <a
-          className="hero-resume"
-          href="/Prakash Jha.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My Resume
-        </a>
+        <div className="hero-stats" aria-label="Portfolio highlights">
+          {stats.map((stat) => (
+            <div className="hero-stat" key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="hero-visual">
+        <div className="availability-pill">
+          <span></span>
+          Available for internship and full-time roles
+        </div>
+        <img src={wall} alt='Prakash Jha Profile' className='hero-img' />
+        <div className="hero-tech-card">
+          <p>Current Focus</p>
+          <strong>React + Node.js + MongoDB</strong>
+        </div>
       </div>
     </div>
   )

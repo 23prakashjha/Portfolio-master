@@ -16,7 +16,6 @@ import flipkart from '../assets/flipkart.PNG';
 import Bikewala from '../assets/Bikewala.PNG';
 import fooddel from '../assets/fooddel.PNG';
 import Burger from '../assets/Burger.PNG';
-import ielts from '../assets/ielts.PNG';
 import mern from '../assets/mern.PNG';
 import assignment from '../assets/assignment.PNG';
 import studentapi from '../assets/studentapi.PNG';
@@ -209,18 +208,88 @@ const projectData = [
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projectData : projectData.slice(0, 8);
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [featuredOnly, setFeaturedOnly] = useState(false);
+  const categories = ['All', 'MERN', 'React', 'JavaScript'];
+  const getCategory = (project) => {
+    const text = `${project.title} ${project.description}`.toLowerCase();
+    if (text.includes('mern') || text.includes('mongo')) return 'MERN';
+    if (text.includes('react')) return 'React';
+    return 'JavaScript';
+  };
+  const categoryProjects = activeCategory === 'All'
+    ? projectData
+    : projectData.filter((project) => getCategory(project) === activeCategory);
+  const filteredProjects = categoryProjects.filter((project, index) => {
+    const searchText = `${project.title} ${project.description} ${getCategory(project)}`.toLowerCase();
+    const matchesSearch = searchText.includes(searchTerm.trim().toLowerCase());
+    const matchesFeatured = !featuredOnly || index < 6;
+
+    return matchesSearch && matchesFeatured;
+  });
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 8);
 
   const toggleShowMore = () => setShowAll(!showAll);
+  const changeCategory = (category) => {
+    setActiveCategory(category);
+    setShowAll(false);
+  };
 
   return (
     <div className="projects-container" id="projects">
-      <h2>My Projects</h2>
+      <span className="section-kicker">Featured Work</span>
+      <h2 className="section-heading">Projects that show my build range</h2>
+      <p className="section-copy">
+        Browse full-stack apps, React interfaces, clones and JavaScript projects with live demos and source code.
+      </p>
+      <div className="project-filters" aria-label="Project filters">
+        {categories.map((category) => (
+          <button
+            key={category}
+            type="button"
+            className={activeCategory === category ? 'active' : ''}
+            onClick={() => changeCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+      <div className="project-toolbar">
+        <label className="project-search">
+          <i className="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="search"
+            value={searchTerm}
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+              setShowAll(false);
+            }}
+            placeholder="Search projects, stack or feature..."
+          />
+        </label>
+        <label className="feature-switch">
+          <input
+            type="checkbox"
+            checked={featuredOnly}
+            onChange={() => {
+              setFeaturedOnly((current) => !current);
+              setShowAll(false);
+            }}
+          />
+          <span></span>
+          Featured only
+        </label>
+      </div>
       <div className="projects-grid">
         {visibleProjects.map((project, index) => (
           <div className="project-card" key={index}>
-            <img src={project.image} alt={project.title} />
+            <div className="project-image-wrap">
+              <img src={project.image} alt={project.title} />
+              {index < 3 && <span className="featured-badge">Featured</span>}
+            </div>
             <div className="project-info">
+              <span className="project-category">{getCategory(project)}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <div className="project-buttons">
@@ -245,12 +314,17 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* View More / View Less Button */}
-      <div className="view-more-container">
-        <button className="view-more-button" onClick={toggleShowMore}>
-          {showAll ? 'View Less' : 'View More'}
-        </button>
-      </div>
+      {filteredProjects.length === 0 && (
+        <p className="empty-projects">No projects found. Try another search or category.</p>
+      )}
+
+      {filteredProjects.length > 8 && (
+        <div className="view-more-container">
+          <button className="view-more-button" onClick={toggleShowMore}>
+            {showAll ? 'View Less' : `View More (${filteredProjects.length - visibleProjects.length})`}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
