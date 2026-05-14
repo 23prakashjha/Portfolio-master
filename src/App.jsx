@@ -28,13 +28,9 @@ const App = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
-  };
-
   return (
     <div>
-      <Navbar theme={theme} onToggleTheme={toggleTheme}/>
+      <Navbar theme={theme} setTheme={setTheme}/>
       <Hero/>
       <About/>
       <Experience/>

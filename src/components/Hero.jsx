@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hero.css'
-import wall from '../assets/wall.png'
+import prak from '../assets/prak.png'
 import { ReactTyped } from 'react-typed'
 
 const Hero = () => {
@@ -64,10 +64,10 @@ const Hero = () => {
           <span></span>
           Available for internship and full-time roles
         </div>
-        <img src={wall} alt='Prakash Jha Profile' className='hero-img' />
+        <img src={prak} alt='Prakash Jha Profile' className='hero-img' />
         <div className="hero-tech-card">
           <p>Current Focus</p>
-          <strong>React + Node.js + MongoDB</strong>
+          <strong>React.js + Node.js + MongoDB + Express.js</strong>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import profile from '../assets/profile.png';
+import prak from '../assets/prak.png';
 
 const About = () => {
   const strengths = [
@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div className="about-container" id="about">
       <div className="about-img">
-        <img src={profile} alt="Prakash Jha" />
+        <img src={prak} alt="Prakash Jha" />
         <div className="about-badges">
           <div className="about-badge">
             <strong>MCA</strong>
@@ -31,7 +31,7 @@ const About = () => {
         <h2 className="section-heading">I turn ideas into useful web experiences.</h2>
         <p>
           Hi, I'm <strong>Prakash Jha</strong>, a passionate and motivated
-          <strong> Full Stack Developer</strong> with hands-on experience building
+          <strong> MERN Stack Developer</strong> with hands-on experience building
           modern web applications from polished frontend screens to practical backend APIs.
         </p>
 

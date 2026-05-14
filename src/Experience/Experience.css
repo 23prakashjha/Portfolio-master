@@ -1,4 +1,5 @@
 .experience-container {
+  min-height: 100vh;
   padding: 90px max(24px, calc((100vw - 1180px) / 2));
 }
 

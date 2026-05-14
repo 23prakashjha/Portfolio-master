@@ -3,6 +3,7 @@
   grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
   align-items: center;
   gap: 54px;
+  min-height: 100vh;
   padding: 90px max(24px, calc((100vw - 1180px) / 2));
 }
 

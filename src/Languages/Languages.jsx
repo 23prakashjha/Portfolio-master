@@ -6,7 +6,7 @@ const Languages = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(null);
 
   const languages = {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Bootstrap, Tailwind CSS'],
+    frontend: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Bootstrap', 'TailwindCSS', 'Next.js', 'Typescript'],
     backend: ['Node.js', 'Express.js', 'Python', 'Java'],
     database: ['MongoDB', 'MySQL'],
     Tools: ['Git', 'GitHub','Netlify', 'Vercel','Render'],

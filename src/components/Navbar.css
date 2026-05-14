@@ -58,6 +58,10 @@
   transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
 }
 
+.theme-picker {
+  position: relative;
+}
+
 .theme-toggle {
   display: grid;
   width: 42px;
@@ -76,6 +80,72 @@
   border-color: rgba(15, 159, 143, 0.4);
   color: var(--primary);
   transform: translateY(-2px);
+}
+
+.theme-popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 100;
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+  animation: popIn 0.2s ease;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 140px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-option:hover {
+  background: rgba(15, 159, 143, 0.08);
+}
+
+.theme-option.active {
+  border-color: var(--primary);
+  background: rgba(15, 159, 143, 0.1);
+}
+
+.theme-swatch {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 2px solid;
+  border-radius: 10px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.theme-label {
+  white-space: nowrap;
 }
 
 .nav-menu a:hover {
