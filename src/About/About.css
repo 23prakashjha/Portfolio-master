@@ -32,12 +32,17 @@
   box-shadow: var(--shadow);
 }
 
-.about-badge {
+.about-badges {
   position: absolute;
   right: 0;
   bottom: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.about-badge {
   width: min(230px, 72vw);
-  padding: 16px;
+  padding: 14px 16px;
   border: 1px solid var(--border);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.92);
@@ -48,7 +53,7 @@
 .about-badge strong {
   display: block;
   color: var(--secondary);
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1;
 }
 
@@ -170,7 +175,7 @@
     grid-template-columns: 1fr;
   }
 
-  .about-badge {
+  .about-badges {
     right: 50%;
     transform: translateX(50%);
   }

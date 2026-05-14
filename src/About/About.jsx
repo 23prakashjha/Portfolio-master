@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import wall from '../assets/wall.png';
+import profile from '../assets/profile.png';
 
 const About = () => {
   const strengths = [
@@ -13,10 +13,16 @@ const About = () => {
   return (
     <div className="about-container" id="about">
       <div className="about-img">
-        <img src={wall} alt="Prakash Jha" />
-        <div className="about-badge">
-          <strong>MCA</strong>
-          <span>Gurugram University</span>
+        <img src={profile} alt="Prakash Jha" />
+        <div className="about-badges">
+          <div className="about-badge">
+            <strong>MCA</strong>
+            <span>Gurugram University</span>
+          </div>
+          <div className="about-badge">
+            <strong>BCA</strong>
+            <span>MDU University</span>
+          </div>
         </div>
       </div>
 
