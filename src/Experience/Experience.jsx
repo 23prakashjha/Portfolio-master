@@ -3,15 +3,28 @@ import './Experience.css';
 
 const experienceItems = [
   {
-    period: '2024 - Present',
-    role: 'MCA Student',
-    company: 'Gurugram University',
-    type: 'Education',
+    period: '27/01/2026 - 27/04/2026',
+    role: 'MERN Stack Developer',
+    company: 'VGI Sooprs Technology Pvt. Ltd.',
+    type: 'Internship',
     points: [
-      'Building a strong foundation in software engineering, database systems and web application development.',
-      'Practicing full-stack concepts through hands-on React, Node.js, Express.js and MongoDB projects.',
+      'Developed and maintained full-stack web applications using MongoDB, Express.js, React, and Node.js.',
+      'Collaborated with the development team to implement RESTful APIs and integrate frontend components with backend services.',
+      'Participated in code reviews and contributed to improving application performance and code quality.',
     ],
   },
+  {
+    period: 'April 2025 - June 2025',
+    role: 'MERN Stack Developer',
+    company: 'MY JOB GROW',
+    type: 'Internship',
+    points: [
+      'Built and maintained full-stack web applications using MongoDB, Express.js, React, and Node.js.',
+      'Worked on API development, database management, and frontend-backend integration.',
+      'Gained hands-on experience in agile development and version control with Git.',
+    ],
+  },
+  
   {
     period: '2024 - Present',
     role: 'Full Stack Developer',
@@ -23,7 +36,7 @@ const experienceItems = [
     ],
   },
   {
-    period: '2023 - 2024',
+    period: '2020 - 2023',
     role: 'Frontend Developer',
     company: 'React and JavaScript Practice',
     type: 'Frontend',
@@ -33,7 +46,7 @@ const experienceItems = [
     ],
   },
   {
-    period: '2023 - Present',
+    period: '2024 - Present',
     role: 'Deployment and Tooling',
     company: 'GitHub, Vercel, Netlify, Render',
     type: 'Tools',
