@@ -12,10 +12,10 @@ const Hero = () => {
 
   return (
     <div className='hero' id='hero'>
-      <div className="hero-copy">
+      <div className="hero-copy reveal reveal-left">
         <span className="section-kicker">Full Stack Developer Portfolio</span>
         <h1>
-          I'm Prakash Jha,{" "}
+          <span className="gradient-text">I'm Prakash Jha</span>,{" "}
           <ReactTyped
             className="typed-text"
             strings={[
@@ -50,8 +50,12 @@ const Hero = () => {
         </div>
 
         <div className="hero-stats" aria-label="Portfolio highlights">
-          {stats.map((stat) => (
-            <div className="hero-stat" key={stat.label}>
+          {stats.map((stat, index) => (
+            <div 
+              className="hero-stat reveal" 
+              key={stat.label}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>
             </div>
@@ -59,11 +63,14 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-visual">
+      <div className="hero-visual reveal reveal-right" style={{ transitionDelay: '200ms' }}>
         <div className="availability-pill">
           <span></span>
-          Available for internship and full-time roles
+          Available for full-time roles
         </div>
+        <div className="hero-float-icon float-icon-1"><i className="fa-brands fa-react"></i></div>
+        <div className="hero-float-icon float-icon-2"><i className="fa-brands fa-node-js"></i></div>
+        <div className="hero-float-icon float-icon-3"><i className="fa-solid fa-database"></i></div>
         <img src={prak} alt='Prakash Jha Profile' className='hero-img' />
         <div className="hero-tech-card">
           <p>Current Focus</p>

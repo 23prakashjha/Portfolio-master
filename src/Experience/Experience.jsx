@@ -24,7 +24,7 @@ const experienceItems = [
       'Gained hands-on experience in agile development and version control with Git.',
     ],
   },
-  
+
   {
     period: '2024 - Present',
     role: 'Full Stack Developer',
@@ -45,21 +45,11 @@ const experienceItems = [
       'Improved skills in component design, CSS layouts, forms, filters, modals and user-friendly interactions.',
     ],
   },
-  {
-    period: '2024 - Present',
-    role: 'Deployment and Tooling',
-    company: 'GitHub, Vercel, Netlify, Render',
-    type: 'Tools',
-    points: [
-      'Published multiple live projects and maintained source code on GitHub.',
-      'Used modern development tools including VS Code, Postman and Git for project workflow.',
-    ],
-  },
 ];
 
 const Experience = () => {
   return (
-    <section className="experience-container" id="experience">
+    <section className="experience-container reveal" id="experience">
       <span className="section-kicker">Experience</span>
       <h2 className="section-heading">My learning and project journey</h2>
       <p className="section-copy">
@@ -67,7 +57,7 @@ const Experience = () => {
       </p>
 
       <div className="experience-layout">
-        <div className="experience-summary">
+        <div className="experience-summary reveal reveal-left">
           <div>
             <strong>25+</strong>
             <span>Projects completed</span>
@@ -83,8 +73,12 @@ const Experience = () => {
         </div>
 
         <div className="experience-timeline">
-          {experienceItems.map((item) => (
-            <article className="experience-card" key={`${item.role}-${item.company}`}>
+          {experienceItems.map((item, index) => (
+            <article
+              className="experience-card reveal reveal-right"
+              key={`${item.role}-${item.company}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
               <div className="experience-date">{item.period}</div>
               <div className="experience-body">
                 <span className="experience-type">{item.type}</span>

@@ -312,13 +312,13 @@ const Languages = () => {
   };
 
   return (
-    <div className="languages-container" id="languages">
+    <div className="languages-container reveal" id="languages">
       <span className="section-kicker">Skills Lab</span>
       <h2 className="section-heading">Technologies I work with</h2>
       <p className="section-copy">
         A practical stack for building responsive interfaces, APIs, databases and production deployments.
       </p>
-      <div className="tabs">
+      <div className="tabs reveal reveal-scale" style={{ transitionDelay: '100ms' }}>
         <button
           className={activeTab === 'frontend' ? 'tab active' : 'tab'}
           onClick={() => setActiveTab('frontend')}
@@ -349,9 +349,10 @@ const Languages = () => {
         {languages[activeTab].map((lang, index) => (
           <div 
             className="language-item clickable" 
-            key={index}
+            key={`${activeTab}-${lang}`}
             onClick={() => setSelectedLanguage(lang)}
             title="Click to view details"
+            style={{ animationDelay: `${index * 40}ms` }}
           >
             {lang}
             <span className="theory-hint">Learn</span>

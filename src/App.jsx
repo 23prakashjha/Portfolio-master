@@ -8,29 +8,59 @@ import Projects from './Projects/Projects'
 import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
 
-
-
 const App = () => {
   const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'light');
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     localStorage.setItem('portfolio-theme', theme);
+    document.documentElement.style.setProperty('--theme-transition', '0.6s');
   }, [theme]);
 
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 500);
+    const handleScroll = () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      setScrollProgress(Math.min((winScroll / height) * 100, 100));
+      setShowScrollTop(winScroll > 500);
+    };
 
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
-
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.06, rootMargin: '0px 0px -30px 0px' }
+    );
+
+    revealElements.forEach((el) => observer.observe(el));
+    return () => revealElements.forEach((el) => observer.unobserve(el));
   }, []);
 
   return (
     <div>
+      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
+
+      <div className="bg-blobs-container">
+        <div className="bg-blob bg-blob-1"></div>
+        <div className="bg-blob bg-blob-2"></div>
+      </div>
+
       <Navbar theme={theme} setTheme={setTheme}/>
+      
       <Hero/>
       <About/>
       <Experience/>
@@ -38,13 +68,14 @@ const App = () => {
       <Projects/>
       <Contact/>
       <Footer/>
+      
       <button
         className={`scroll-top ${showScrollTop ? 'show' : ''}`}
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         aria-label="Scroll to top"
       >
-        &uarr;
+        <i className="fa-solid fa-arrow-up"></i>
       </button>
     </div>
   )

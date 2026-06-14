@@ -136,11 +136,19 @@
   height: 36px;
   place-items: center;
   border: 1px solid var(--border);
-  border-radius: 12px;
-  background: #fff;
-  color: var(--ink);
+  border-radius: 50%;
+  background: var(--surface-strong);
+  color: var(--text);
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 500;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+  background: var(--primary);
+  color: #fff;
 }
 
 .theory-content h3 {

@@ -40,7 +40,7 @@ const Contact = () => {
       <span className="section-kicker">Contact</span>
       <h2 className="section-heading">Let's build something useful together.</h2>
       <p className="section-copy">
-        I am open to internships, full-time roles and project collaborations.
+        I am open to full-time roles and project collaborations.
       </p>
 
       <div className="contact-content">

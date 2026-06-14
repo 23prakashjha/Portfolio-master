@@ -12,15 +12,32 @@ const themes = [
 const Navbar = ({ theme, setTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [themeOpen, setThemeOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
+  const [scrolled, setScrolled] = useState(false);
   const navItems = [
     { label: 'Home', href: '#hero' },
     { label: 'About', href: '#about' },
-    { label: 'Internship', href: '#internship' },
     { label: 'Experience', href: '#experience' },
     { label: 'Skills', href: '#languages' },
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 60);
+      const sections = navItems.map(item => item.href.slice(1));
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i]);
+        if (el && el.getBoundingClientRect().top <= 200) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
@@ -28,10 +45,7 @@ const Navbar = ({ theme, setTheme }) => {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
-
-    return () => {
-      document.body.style.overflow = '';
-    };
+    return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
   useEffect(() => {
@@ -41,9 +55,19 @@ const Navbar = ({ theme, setTheme }) => {
     return () => document.removeEventListener('click', close);
   }, [themeOpen]);
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const id = href.slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    setMenuOpen(false);
+  };
+
   return (
-    <nav className="navbar">
-      <a href="#hero" className="logo" onClick={() => setMenuOpen(false)}>
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+      <a href="#hero" className="logo" onClick={(e) => handleNavClick(e, '#hero')}>
         <span>PJ</span>
         Prakash Jha
       </a>
@@ -51,7 +75,13 @@ const Navbar = ({ theme, setTheme }) => {
       <ul className={`nav-menu ${menuOpen ? 'active' : ''}`} id="nav-menu">
         {navItems.map((item) => (
           <li key={item.href}>
-            <a href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
+            <a
+              href={item.href}
+              className={activeSection === item.href.slice(1) ? 'active' : ''}
+              onClick={(e) => handleNavClick(e, item.href)}
+            >
+              {item.label}
+            </a>
           </li>
         ))}
       </ul>
@@ -88,7 +118,7 @@ const Navbar = ({ theme, setTheme }) => {
             </div>
           )}
         </div>
-        <a href="#contact" className="nav-connect" onClick={() => setMenuOpen(false)}>
+        <a href="#contact" className="nav-connect" onClick={(e) => handleNavClick(e, '#contact')}>
           Hire Me
         </a>
         <button

@@ -102,13 +102,16 @@ const Projects = () => {
           Featured only
         </label>
       </div>
+      <div className="projects-count">
+        Showing <strong>{visibleProjects.length}</strong> of <strong>{filteredProjects.length}</strong> projects
+      </div>
       <div className="projects-grid">
         {visibleProjects.map((project, index) => {
           const category = getCategory(project);
           const stack = extractStack(`${project.title} ${project.description}`);
           const repo = project.repo;
           return (
-            <div className="project-card" key={index}>
+            <div className="project-card" key={index} style={{ animationDelay: `${index * 0.08}s` }}>
               <div className="project-image-wrap">
                 <img src={project.image} alt={project.title} />
                 {index < 3 && <span className="featured-badge"><i className="fa-solid fa-star"></i> Featured</span>}
@@ -202,7 +205,7 @@ const Projects = () => {
       {filteredProjects.length > 8 && (
         <div className="view-more-container">
           <button className="view-more-button" onClick={toggleShowMore}>
-            {showAll ? 'View Less' : `View More (${filteredProjects.length - visibleProjects.length})`}
+            <span>{showAll ? 'View Less' : `View More (${filteredProjects.length - visibleProjects.length})`}</span>
           </button>
         </div>
       )}

@@ -28,9 +28,10 @@
   width: min(76vw, 350px);
   aspect-ratio: 1;
   object-fit: cover;
-  border: 9px solid #fff;
+  border: 9px solid var(--surface-strong);
   border-radius: 28px;
   box-shadow: var(--shadow);
+  transition: border-color 0.3s ease;
 }
 
 .about-badges {
@@ -46,9 +47,15 @@
   padding: 14px 16px;
   border: 1px solid var(--border);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--surface);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(14px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
 }
 
 .about-badge strong {
@@ -67,8 +74,7 @@
 
 .about-content p {
   color: var(--muted);
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 17px;
+  font-size: 16.5px;
   line-height: 1.75;
   margin-bottom: 22px;
 }
@@ -91,11 +97,17 @@
   padding: 14px 14px 14px 42px;
   border: 1px solid var(--border);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--surface);
   color: var(--ink);
-  font-family: "Segoe UI", Arial, sans-serif;
   font-weight: 700;
   box-shadow: var(--shadow-soft);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about-strengths li:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
 }
 
 .about-strengths li::before {
@@ -121,8 +133,15 @@
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 18px;
-  background: #fff;
+  background: var(--surface-strong);
   box-shadow: var(--shadow-soft);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about-cards div:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
 }
 
 .about-cards span {
@@ -163,12 +182,20 @@
   .about-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
 @media (max-width: 620px) {
   .about-container {
     padding-inline: 16px;
+    gap: 24px;
+  }
+
+  .about-img img {
+    width: min(72vw, 280px);
   }
 
   .about-strengths,
@@ -176,8 +203,58 @@
     grid-template-columns: 1fr;
   }
 
+  .about-strengths {
+    gap: 10px;
+  }
+
+  .about-strengths li {
+    min-height: 46px;
+    padding: 12px 12px 12px 38px;
+    font-size: 14px;
+  }
+
+  .about-strengths li::before {
+    left: 14px;
+    top: 17px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .about-cards {
+    gap: 10px;
+  }
+
+  .about-cards div {
+    padding: 14px;
+  }
+
   .about-badges {
-    right: 50%;
-    transform: translateX(50%);
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+    transform: none;
+  }
+
+  .about-badge {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .about-badge strong {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+
+  .about-btn {
+    min-height: 46px;
+    padding: 11px 20px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
   }
 }
