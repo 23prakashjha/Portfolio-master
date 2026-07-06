@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
+import Stars from './components/Stars'
 import Hero from './components/Hero'
 import About from './About/About'
 import Experience from './Experience/Experience'
@@ -54,6 +55,7 @@ const App = () => {
     <div>
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
 
+      <Stars/>
       <div className="bg-blobs-container">
         <div className="bg-blob bg-blob-1"></div>
         <div className="bg-blob bg-blob-2"></div>

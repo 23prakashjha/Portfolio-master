@@ -18,6 +18,10 @@
   transition: background var(--theme-transition) ease, border-color var(--theme-transition) ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
 
+.navbar:hover {
+  border-color: color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
 .navbar-scrolled {
   box-shadow: var(--shadow);
 }

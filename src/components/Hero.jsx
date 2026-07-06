@@ -37,7 +37,7 @@ const Hero = () => {
         </p>
 
         <div className="hero-action">
-          <a href="#projects" className="hero-connect">View Projects</a>
+          <a href="#projects" className="hero-connect"><span><i className="fa-solid fa-arrow-right"></i> View Projects</span></a>
 
           <a
             className="hero-resume"
@@ -45,7 +45,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            My Resume
+            <i className="fa-solid fa-file-lines"></i> My Resume
           </a>
         </div>
 

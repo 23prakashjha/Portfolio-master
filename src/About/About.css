@@ -21,6 +21,13 @@
   border-radius: 28px;
   background: linear-gradient(135deg, rgba(247, 184, 1, 0.32), rgba(15, 159, 143, 0.24));
   transform: rotate(-5deg);
+  animation: aboutShape 10s ease-in-out infinite;
+}
+
+@keyframes aboutShape {
+  0%, 100% { transform: rotate(-5deg) scale(1); border-radius: 28px; }
+  33% { transform: rotate(-3deg) scale(1.03); border-radius: 34% 66% 60% 40%; }
+  66% { transform: rotate(-7deg) scale(0.97); border-radius: 50% 50% 40% 60%; }
 }
 
 .about-img img {
@@ -50,12 +57,13 @@
   background: var(--surface);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(14px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-badge:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.02);
   border-color: var(--primary);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--primary) 16%, transparent);
 }
 
 .about-badge strong {
@@ -162,6 +170,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   min-height: 50px;
   padding: 13px 24px;
   border-radius: 999px;
@@ -171,11 +180,32 @@
   text-decoration: none;
   box-shadow: 0 16px 30px rgba(242, 95, 92, 0.2);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
 }
 
 .about-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 18px 36px rgba(15, 159, 143, 0.22);
+}
+
+.about-btn:hover::before {
+  opacity: 1;
+}
+
+.about-btn span {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 900px) {
