@@ -29,7 +29,7 @@ import bulk from '../../assets/bulk.PNG';
 const projectData = [
   {
     title: 'Bulk Outreach System',
-    image: mernfood,
+    image:bulk,
     description: 'MERN stack contact management website with MongoDB, Express.js, React, and Node.js for storing and managing contacts.',
     live: 'https://mern-contact-website.vercel.app/',
     repo: 'https://github.com/23prakashjha/mern-contact-website.git',
