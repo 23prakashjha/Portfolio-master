@@ -24,6 +24,10 @@ import vibe from '../../assets/vibe.PNG';
 import Emern from '../../assets/Emern.PNG';
 import mernfood from '../../assets/mernfood.PNG';
 import Bulk from '../../assets/Bulk.png';
+import Tick from '../../assets/Tick.png';
+import Hire from '../../assets/Hire.png';
+import Doc from '../../assets/Doc.png';
+import chate from '../../assets/chate.png';
 
 
 const projectData = [
@@ -36,28 +40,28 @@ const projectData = [
   },
   {
     title: 'Doctor Appointment System',
-    image: mernfood,
+    image: Doc,
     description: 'React-based doctor appointment booking system with scheduling, patient management, and authentication.',
     live: 'https://doctor-appointment-system-swart.vercel.app/',
     repo: 'https://github.com/23prakashjha/Doctor-Appointment-System.git',
   },
   {
     title: 'MERN Job Portal',
-    image: mernfood,
+    image: Hire,
     description: 'Full-stack MERN job portal platform with job listings, applications, and user authentication.',
     live: 'https://mern-job-portal-beryl-one.vercel.app/',
     repo: 'https://github.com/23prakashjha/Mern-Job-portal.git',
   },
   {
     title: 'Ticket Booking System',
-    image: mernfood,
+    image: Tick,
     description: 'MERN stack ticket booking system for reserving tickets with user authentication and booking management.',
     live: 'https://ticket-booking-mern.vercel.app/',
     repo: 'https://github.com/23prakashjha/ticket-booking-mern.git',
   },
    {
     title: 'MERN Chat App',
-    image: mernfood,
+    image:chate,
     description: 'Real-time MERN chat application with instant messaging, user authentication, and chat room management.',
     live: 'https://mern-chat-app-khaki-sigma.vercel.app/',
     repo: 'https://github.com/23prakashjha/Mern-chat-app.git',
