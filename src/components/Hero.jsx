@@ -41,7 +41,7 @@ const Hero = () => {
 
           <a
             className="hero-resume"
-            href="/Prakash Jha.pdf"
+            href="/Prakash_Jha_Mern Stack Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -12,14 +12,8 @@
 .hero::before {
   content: "";
   position: absolute;
-  inset: 90px max(20px, calc((100vw - 1240px) / 2)) 32px;
+  inset: 0;
   z-index: -1;
-  border: 1px solid var(--border);
-  border-radius: 36px;
-  background: var(--surface);
-  backdrop-filter: blur(16px);
-  box-shadow: var(--shadow);
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.5s ease;
 }
 
 .hero::after {
