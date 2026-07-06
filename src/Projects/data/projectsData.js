@@ -23,7 +23,7 @@ import theory from '../../assets/theory.PNG';
 import vibe from '../../assets/vibe.PNG';
 import Emern from '../../assets/Emern.PNG';
 import mernfood from '../../assets/mernfood.PNG';
-import Bulk from '../../assets/Bulk.PNG';
+import Bulk from '../../assets/Bulk.png';
 
 
 const projectData = [
