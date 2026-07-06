@@ -23,13 +23,13 @@ import theory from '../../assets/theory.PNG';
 import vibe from '../../assets/vibe.PNG';
 import Emern from '../../assets/Emern.PNG';
 import mernfood from '../../assets/mernfood.PNG';
-import bulk from '../../assets/bulk.PNG';
+import Bulk from '../../assets/Bulk.PNG';
 
 
 const projectData = [
   {
     title: 'Bulk Outreach System',
-    image:bulk,
+    image:Bulk,
     description: 'MERN stack contact management website with MongoDB, Express.js, React, and Node.js for storing and managing contacts.',
     live: 'https://mern-contact-website.vercel.app/',
     repo: 'https://github.com/23prakashjha/mern-contact-website.git',
