@@ -28,15 +28,21 @@ import Tick from '../../assets/Tick.png';
 import Hire from '../../assets/Hire.png';
 import Doc from '../../assets/Doc.png';
 import chate from '../../assets/chate.png';
+import lms from '../../assets/lms.png';
 
 
 const projectData = [
   {
+    title: 'Learning Management System',
+    image: lms,
+    description: 'A full-featured Learning Management System built with MERN Stack (MongoDB, Express, React, Node.js).',
+    repo: 'https://github.com/23prakashjha/lms-website.git',
+  },
+  {
     title: 'Bulk Outreach System',
     image:Bulk,
     description: 'MERN stack contact management website with MongoDB, Express.js, React, and Node.js for storing and managing contacts.',
-    live: 'https://mern-contact-website.vercel.app/',
-    repo: 'https://github.com/23prakashjha/mern-contact-website.git',
+    repo: 'https:https://github.com/23prakashjha/bulk-outreach-system.git',
   },
   {
     title: 'Doctor Appointment System',
