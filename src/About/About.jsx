@@ -68,7 +68,7 @@ const About = () => {
 
         <a
           className="about-btn"
-          href="/Prakash Jha.pdf"
+          href="/Prakash_Jha_Mern Stack Developer.pdf"
           download
           target="_blank"
           rel="noopener noreferrer"
