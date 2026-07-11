@@ -116,14 +116,16 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} />
                 {index < 3 && <span className="featured-badge"><i className="fa-solid fa-star"></i> Featured</span>}
                 <div className="project-image-overlay">
-                  <a
-                    href={project.live || '#'}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="overlay-btn"
-                  >
-                    <i className="fa-solid fa-eye"></i> Live
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="overlay-btn"
+                    >
+                      <i className="fa-solid fa-eye"></i> Live
+                    </a>
+                  )}
                   {repo && repo.includes('/') && (
                     <a
                       href={`https://github.com/${repo}`}
@@ -166,14 +168,15 @@ const Projects = () => {
                 </div>
                 <div className="project-meta-border"></div>
                 <div className="project-buttons">
-                  <a
-                    href={project.live || '#'}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={project.live ? '' : 'disabled-link'}
-                  >
-                    <span><i className="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</span>
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span><i className="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</span>
+                    </a>
+                  )}
                   {repo && repo.includes('/') ? (
                     <a
                       href={`https://github.com/${repo}`}
